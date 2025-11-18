@@ -61,9 +61,12 @@ const ContactSection = () => {
               </div>
               <div className="contact-details">
                 <h3 className="contact-subtitle">Address</h3>
-                <p>USA, Florida, Ontario, Toronto</p>
-                <p>Retail/Subhash Place, Phamptune</p>
-                <p>New Delhi-HIOSA</p>
+                <p>504, Pearls Omaxe, Tower- I</p>
+                <p>Netaji Subhash Place, Pitampurae</p>
+                <p>
+
+New Delhi-110034
+</p>
               </div>
             </div>
 
@@ -75,8 +78,10 @@ const ContactSection = () => {
               </div>
               <div className="contact-details">
                 <h3 className="contact-subtitle">E-mail Address</h3>
-                <a href="mailto:oalib@egmail.com" className="email-link">
-                  oalib@egmail.com
+                <a href="mailto:
+aaiifa6@gmail.com" className="email-link">
+                  
+aaiifa6@gmail.com
                 </a>
               </div>
             </div>
@@ -89,8 +94,8 @@ const ContactSection = () => {
               </div>
               <div className="contact-details">
                 <h3 className="contact-subtitle">Phone Number</h3>
-                <a href="tel:+9188040085" className="phone-link">+91 88040 0085</a>
-                <a href="tel:+9188040085" className="phone-link">+91 88040 0085</a>
+                <a href="tel:+9188040085" className="phone-link">+91 9810410186</a>
+                <a href="tel:+9188040085" className="phone-link">+91 9810410815</a>
               </div>
             </div>
           </div>

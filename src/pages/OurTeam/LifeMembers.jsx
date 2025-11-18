@@ -72,7 +72,7 @@ const LifeMembers = [
     desc: "LM-09",
     title: "Director",
     company: "Antarctic Industries Ltd",
-    img: "http://hoverbusinessservices.com/cloud/aiifa/media/members/Mr-Sandeep-jain.jpg",
+    img: "http://hoverbusinessservices.com/cloud/aiifa/media/members/user.png",
   },
   {
     id: "LM-10",
@@ -80,7 +80,7 @@ const LifeMembers = [
     desc: "LM-10",
     title: "Director",
     company: "Laxcon Steels Ltd",
-    img: "http://hoverbusinessservices.com/cloud/aiifa/media/members/Gopal-sir-photo-nc.jpg",
+    img: "http://hoverbusinessservices.com/cloud/aiifa/media/members/user.png",
   },
   {
     id: "LM-11",
@@ -231,18 +231,7 @@ export default function GoverningBodies() {
           <h2 className="our-team-title">Our Team</h2>
 
           {/* Search Bar */}
-          <div className="our-team-search-wrapper">
-  <div className="our-team-search-box">
-    <Search className="our-team-search-icon" size={18} />
-    <input
-      type="text"
-      placeholder="Search team member..."
-      value={searchTerm}
-      onChange={(e) => setSearchTerm(e.target.value)}
-      className="our-team-search"
-    />
-  </div>
-</div>
+          
 
           <div className="our-team-grid">
             {filteredMembers.map((member, index) => (

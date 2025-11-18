@@ -672,7 +672,7 @@ const ActiveMember = [
     desc:"839",
     title:"",
     company:"M/s Gopal Sponge & Power Pvt. Ltd.,",
-    img:"http://hoverbusinessservices.com/cloud/aiifa/media/members/Mr-Vijay-jhanwar.jpg",
+    img:"http://hoverbusinessservices.com/cloud/aiifa/media/members/user.png",
   },
   {
     id:"330",
@@ -1896,18 +1896,7 @@ export default function ActiveMembers() {
           <h2 className="our-team-title">Our Team</h2>
 
           {/* Search Bar */}
-          <div className="our-team-search-wrapper">
-  <div className="our-team-search-box">
-    <Search className="our-team-search-icon" size={18} />
-    <input
-      type="text"
-      placeholder="Search team member..."
-      value={searchTerm}
-      onChange={(e) => setSearchTerm(e.target.value)}
-      className="our-team-search"
-    />
-  </div>
-</div>
+          
 
           <div className="our-team-grid">
             {filteredMembers.map((member, index) => (

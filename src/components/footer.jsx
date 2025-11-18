@@ -147,8 +147,8 @@ export default function Footer() {
         <div className="container">
           <div className="footer-bottom-content">
             <p className="copyright-text">
-              Anifab Copyright © {currentYear} All Right Reserved By <a href="https://hoverbusinessservices.com/">Hover
-              Business Services LLC</a> 
+              Aaiifa © {currentYear} All Right Reserved By <a href="https://hoverbusinessservices.com/">Hover
+              Business Services LLP</a> 
             </p>
           </div>
         </div>

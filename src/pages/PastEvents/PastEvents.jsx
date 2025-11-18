@@ -6,37 +6,37 @@ const PastEvents = () => {
     {
       year: "2024",
       title: "AIIFA SteelEx 2024",
-      img: "/media/events/steel-event.jpg",
+      img: "http://hoverbusinessservices.com/cloud/aiifa/media/events/steel-event.jpg",
     },
     {
       year: "2023",
       title: "2023 Event AIIFA",
-      img: "/media/events/event.jpg",
+      img: "http://hoverbusinessservices.com/cloud/aiifa/media/events/event.jpg",
     },
     {
       year: "2022",
       title: "2022 Event AIIFA",
-      img: "/media/events/past-5.png",
+      img: "http://hoverbusinessservices.com/cloud/aiifa/media/events/past-5.png",
     },
     {
       year: "2019",
       title: "2019 Event AIIFA",
-      img: "/media/events/event2.png",
+      img: "http://hoverbusinessservices.com/cloud/aiifa/media/events/event2.png",
     },
     {
       year: "2018",
       title: "2018 Event AIIFA",
-      img: "/media/events/past-3-1.jpg",
+      img: "http://hoverbusinessservices.com/cloud/aiifa/media/events/past-3-1.jpg",
     },
     {
       year: "2017",
       title: "2017 Event AIIFA",
-      img: "/media/events/past-2-1.jpg",
+      img: "http://hoverbusinessservices.com/cloud/aiifa/media/events/past-2-1.jpg",
     },
     {
       year: "2016",
       title: "2016 Event AIIFA",
-      img: "/media/events/past-1-1.jpg",
+      img: "http://hoverbusinessservices.com/cloud/aiifa/media/events/past-1-1.jpg",
     },
   ];
 

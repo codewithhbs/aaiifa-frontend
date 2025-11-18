@@ -2079,8 +2079,7 @@ header {
 
 /* Mobile Menu open state */
 .mobile-menu {
-  max-height: 300px; /* Adjust as needed based on your mobile menu content height */
-  /* Remove the padding transition here, apply to content div */
+  max-height: 100vh; 
 }
 
 
@@ -2189,7 +2188,50 @@ header {
   .header-main .row {
     padding: 8px 10px;
   }
+  .contact-details{
+    text-align: left;
+  }
+  .title-underline{
+    display: none;
+  }
+  .contact-title {
+    margin-bottom: 10px !important;
+  }
+.contact-header{
+    margin-bottom: 0px !important;
+}
+  .contact-info {
+    margin-bottom: 10px;
+}
 
+ .breadcrum-section{
+        padding: 20px 0 !important;
+ }
+ .aiifa-profile-section {
+    padding: 80px 18px;
+ }
+ .header-height {
+height:74px;
+ }
+.temp-logo .logo-img {
+    height: auto;
+    display: block;
+    width: 185px;
+    min-height: 50px;
+}
+}
+.contact-details{
+    text-align: left;
+
+}
+.contact-details .contact-subtitle {
+    font-size: 1.5rem;
+}
+.contact-details p {
+    font-size: 1rem;
+}
+.contact-details a {
+    font-size: 1rem;
 }
 
 /* Extra small devices (portrait phones, less than 576px) */
@@ -2213,7 +2255,7 @@ header {
   left: 0;
   width: 80%;
   max-width: 320px;
-  height: 100vh;
+  height: 200vh;
   background-color: #fff;
   box-shadow: 2px 0 10px rgba(0, 0, 0, 0.15);
   transform: translateX(-100%);
@@ -10123,4 +10165,30 @@ body.sticky-header {
 }
 .instagram:hover {
   color: #e4405f;
+}
+.banner-slider {
+  width: 100%;
+  overflow: hidden;
+  background: #000; /* optional: makes empty space look clean */
+}
+
+.banner-img {
+  width: 100%;
+  height: auto;  
+  object-fit: contain;   /* show full image */
+}
+
+
+@media (max-width: 768px) {
+  .banner-img {
+    min-height: 250px !important;     /* adjust mobile height */
+    object-fit: cover; /* ensures clean crop */
+  }
+}
+
+@media (max-width: 480px) {
+  .banner-img {
+    min-height: 200px; 
+    width: 100%;    /* small mobile screens */
+  }
 }

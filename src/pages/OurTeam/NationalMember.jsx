@@ -13,7 +13,7 @@ const NationalMember = [
     name: "Shri Gopal Gupta",
     title: "President Emeritus",
     company: "M/s Laxcon Steel Ltd",
-    img: "http://hoverbusinessservices.com/cloud/aiifa/media/members/Gopal-sir-photo-nc.jpg",
+    img: "http://hoverbusinessservices.com/cloud/aiifa/media/members/user.png",
   },
   {
     name: "Shri Devendra Kumar Agrawal",
@@ -255,18 +255,7 @@ export default function GoverningBodies() {
           <h2 className="our-team-title">Our Team</h2>
 
           {/* Search Bar */}
-          <div className="our-team-search-wrapper">
-  <div className="our-team-search-box">
-    <Search className="our-team-search-icon" size={18} />
-    <input
-      type="text"
-      placeholder="Search team member..."
-      value={searchTerm}
-      onChange={(e) => setSearchTerm(e.target.value)}
-      className="our-team-search"
-    />
-  </div>
-</div>
+          
 
           <div className="our-team-grid">
             {filteredMembers.map((member, index) => (

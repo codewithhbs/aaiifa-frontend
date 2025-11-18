@@ -106,7 +106,7 @@ export default function Header() {
       {/* Navbar */}
       <div className="menu-layout1">
         <Container fluid>
-          <Row className="align-items-center justify-content-between px-3">
+          <Row className="header-height align-items-center justify-content-between px-3">
             <Col xs="6" lg="3">
               <a href="/" className="temp-logo d-inline-block">
                 <img src="media/logo.jpg" alt="Logo" className="logo-img" />

@@ -69,12 +69,6 @@ const newsletterData = [
     imageUrl: 'http://hoverbusinessservices.com/cloud/aiifa/media/newsletters/2019/11.png',
     linkUrl: 'https://hoverbusinessservices.com/cloud/aiifa/newsletters/2019/November-2019.pdf',
   },
-  {
-    id: 'Dec',
-    title: 'Dec Newsletter 2019', 
-    imageUrl: 'http://hoverbusinessservices.com/cloud/aiifa/media/newsletters/2019/12.png',
-    linkUrl: '#',
-  },
 ];
 
 const Newsletter2019 = () => {
