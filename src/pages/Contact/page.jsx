@@ -29,19 +29,7 @@ const ContactSection = () => {
   };
   return (
     <section className="contact-section ">
-      {/* 🗺️ Map Section */}
-      <div className="map-container">
-        <iframe
-          title="Google Map"
-          src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d6999.932645477202!2d77.15178!3d28.690654!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x390d0234641aaaab%3A0xdb7dd47463729a2a!2sAIIFA%20Sustainable%20Steel%20Manufacturers%20Association!5e0!3m2!1sen!2sin!4v1762417646926!5m2!1sen!2sin"
-          width="100%"
-          height="400"
-          allowFullScreen=""
-          loading="lazy"
-          referrerPolicy="no-referrer-when-downgrade"
-        ></iframe>
-      </div>
-
+ 
       <div className="contact-container">
         <div className="contact-grid">
 
@@ -113,6 +101,20 @@ aaiifa6@gmail.com" className="text-dark">
           </div>
         </div>
       </div>
+
+           {/* 🗺️ Map Section */}
+      <div className="map-container">
+        <iframe
+          title="Google Map"
+          src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d6999.932645477202!2d77.15178!3d28.690654!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x390d0234641aaaab%3A0xdb7dd47463729a2a!2sAIIFA%20Sustainable%20Steel%20Manufacturers%20Association!5e0!3m2!1sen!2sin!4v1762417646926!5m2!1sen!2sin"
+          width="100%"
+          height="400"
+          allowFullScreen=""
+          loading="lazy"
+          referrerPolicy="no-referrer-when-downgrade"
+        ></iframe>
+      </div>
+
     </section>
   );
 };

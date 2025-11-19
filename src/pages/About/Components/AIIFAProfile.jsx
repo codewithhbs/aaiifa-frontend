@@ -1,45 +1,55 @@
-import React from "react";
+import React from 'react';
+import { Link } from "react-router-dom";
+import { FaIndustry } from "react-icons/fa";
 
 
-export default function AIIFAProfile() {
-  return (
-    <>
-    
-        <section className="aiifa-profile-section">
-      <div className="container aiifa-profile-container">
-        <div className="row align-items-center">
-          <div className="col-lg-7 col-md-12 col-12">
-            <div className="aiifa-profile-text">
-              <p className="aiifa-profile-subtitle">OUR PROFILE</p>
-              <h2 className="aiifa-profile-title">Welcome To AIIFA</h2>
-              <p className="aiifa-profile-desc">
-                All India Induction Furnaces Association (AIIFA) being the premier steel industry
-                association of Electric Induction Furnaces in the country represents a major section of
-                steel units, producing steel through this route. There are over 1000 Induction furnace
-                units and over 1200 steel rolling mill units scattered across all states in the country.
-                These units produce around 30 Million tonnes (MT) of steel annually, which is around 27%
-                of the domestic crude steel production of the country. The sector accounts for direct
-                employment of over 2 million people and supports livelihood for another 3 million people.
-                The role of AIIFA is to act as a bridge between the Government and the industry for
-                driving various schemes, participating in the Government’s research programs and ensuring
-                capacity enhancement of its units. It also plays a vital role in bringing various issues
-                of the industry within various related Ministries and concerned departments and also
-                creates awareness of programs and policies of Central/State Government among the members
-                of the association so that their knowledge could be enriched and also could help to adopt
-                the latest route of steel making/processing for production of quality steel and also for
-                mitigation of GHG emission.
-              </p>
-            </div>
-          </div>
-          <div className="col-lg-5 col-md-12 col-12">
-            <div className="aiifa-profile-image">
+export default function AboutUsSection() {
+    return (
+        <section className="about-us-section-image-text ">
+            {/* Background Decorative Elements */}
+            <div className="about-us-decorative-ring-top"></div> {/* New ring at top-right */}
+            <div className="about-us-decorative-dots"></div> {/* New dot pattern */}
+            <div className="about-us-decorative-shape-bottom"></div> {/* New bottom shape */}
+            
+            <div className="about-us-container">
+                <div className="about-us-card">
+                    {/* Left Column: Image and Floating Counter */}
+                    <div className="about-us-image-column">
+                        <div className="about-us-main-image-wrapper">
+                            <div className="aiifa-profile-image">
               <img src="media/about/about1.jpg" alt="AIIFA Office" className="img-fluid" />
             </div>
-          </div>
-        </div>
-      </div>
-    </section>
-    </>
+                            
+                        </div>
+                        <div className="about-us-counter-card">
+                                <div className="counter-icon-wrapper">
+                                    <FaIndustry className="counter-icon" />
+                                </div>
+                                <div className="counter-details">
+                                    <p className="counter-number-new">27%</p> {/* Changed content */}
+                                    <p className="counter-label-new">India's Domestic Crude Steel Production</p> {/* Changed content */}
+                                </div>
+                            </div>
+                    </div>
 
-  );
+                    {/* Right Column: Text Content */}
+                    <div className="about-us-content-column">
+                        <p className="our-team-subtitle">ABOUT US</p> {/* Reusing existing subtitle class */}
+                        <h2 className="our-team-title"> Know About Our Organization</h2> {/* Reusing existing title class */}
+                        
+                        <p className="about-us-description">
+                            The All India Induction Furnaces Association (AIIFA) represents a major segment of India’s steel sector, especially units operating through Electric Induction Furnaces. With over 1000 furnace units and 1200 rolling mills nationwide, the industry produces nearly 30 million tonnes of steel annually—about 27% of the country’s crude steel output.
+                        </p>
+                        <p className="about-us-description">
+                            It provides direct employment to over 2 million people and supports 3 million more. AIIFA works as a vital link between the Government and industry, promoting schemes, guiding research participation, addressing sectoral issues, and spreading awareness of policies to enhance quality, capacity, and reduce emissions.
+                        </p>
+                        
+                        <button className="about-us-btn">
+                            <Link to="/about-us" className="text-white">Read More</Link>
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </section>
+    );
 }

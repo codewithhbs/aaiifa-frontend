@@ -50,7 +50,7 @@ export default function GoverningBodies() {
       <section className="our-team-section">
         <div className="our-team-container">
           <p className="our-team-subtitle">GOVERNING BODIES</p>
-          <h2 className="our-team-title">Our Team</h2>
+          <h2 className="our-team-title text-white">Our Team</h2>
 
           {/* Search Bar */}
           

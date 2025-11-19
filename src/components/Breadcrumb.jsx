@@ -6,44 +6,35 @@ const Breadcrumb = () => {
   const location = useLocation();
   const pathnames = location.pathname.split("/").filter((x) => x);
 
+  const formatText = (text) =>
+    text.replace(/-/g, " ").replace(/\b\w/g, (l) => l.toUpperCase());
+
   const currentPage =
-    pathnames.length > 0
-      ? pathnames[pathnames.length - 1]
-          .replace(/-/g, " ")
-          .replace(/\b\w/g, (l) => l.toUpperCase())
-      : "Home";
+    pathnames.length > 0 ? formatText(pathnames[pathnames.length - 1]) : "Home";
 
   return (
-    <section className="breadcrum-section">
-      <div className="breadcrum-container">
-        {/* Page Title */}
-        <h1 className="breadcrum-title">{currentPage}</h1>
+    <section className="breadcrumb-section">
+      <div className="breadcrumb-container">
+        {/* <h1 className="breadcrumb-title">{currentPage}</h1> */}
 
-        {/* Breadcrumb Navigation */}
-        <nav className="breadcrum-nav">
-          <ol className="breadcrum-list">
+        <nav className="breadcrumb-nav">
+          <ol className="breadcrumb-list">
             <li>
-              <Link to="/" className="breadcrum-link">
-                Home
-              </Link>
+              <Link to="/" className="breadcrumb-link">Home</Link>
             </li>
 
-            {pathnames.map((name, index) => {
-              const routeTo = `/${pathnames.slice(0, index + 1).join("/")}`;
+            {pathnames.map((item, index) => {
+              const route = `/${pathnames.slice(0, index + 1).join("/")}`;
               const isLast = index === pathnames.length - 1;
-              const formattedName = name
-                .replace(/-/g, " ")
-                .replace(/\b\w/g, (l) => l.toUpperCase());
+              const label = formatText(item);
 
               return (
-                <React.Fragment key={routeTo}>
-                  <ChevronRight size={16} className="breadcrum-icon" />
+                <React.Fragment key={route}>
+                  <ChevronRight size={14} className="breadcrumb-icon" />
                   {isLast ? (
-                    <span className="breadcrum-current">{formattedName}</span>
+                    <span className="breadcrumb-current">{label}</span>
                   ) : (
-                    <Link to={routeTo} className="breadcrum-link">
-                      {formattedName}
-                    </Link>
+                    <Link to={route} className="breadcrumb-link">{label}</Link>
                   )}
                 </React.Fragment>
               );

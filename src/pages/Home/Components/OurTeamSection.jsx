@@ -77,7 +77,7 @@ export default function OurTeamSection() {
         {/* The subtitle and title should be semantic, possibly in a header element */}
         <header className="our-team-header">
           <p className="our-team-subtitle">NATIONAL MEMBER</p>
-          <h2 className="our-team-title">Meet Our Team</h2>
+          <h2 className="our-team-title text-light">Meet Our Team</h2>
         </header>
 
         <div className="our-team-grid">
@@ -90,7 +90,7 @@ export default function OurTeamSection() {
 
         {/* Improved Button: An anchor tag (<a>) is the correct semantic element for a link */}
         <a href="/national-member" className="our-team-btn" aria-label="View the full list of national members">
-          Read More
+          View All
         </a>
       </div>
     </section>

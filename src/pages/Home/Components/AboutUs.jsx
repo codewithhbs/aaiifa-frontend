@@ -1,11 +1,12 @@
 import React from 'react';
-import Img from '../Images/abt1.jpg'; // Ensure this path is correct
+import Img from '../Images/abt1.jpg'; 
 import { Link } from "react-router-dom";
-import { FaUserGraduate } from 'react-icons/fa'; // Only FaUserGraduate needed for the counter icon
+import { FaIndustry } from "react-icons/fa";
+
 
 export default function AboutUsSection() {
     return (
-        <section className="about-us-section-image-text">
+        <section className="about-us-section-image-text ">
             {/* Background Decorative Elements */}
             <div className="about-us-decorative-ring-top"></div> {/* New ring at top-right */}
             <div className="about-us-decorative-dots"></div> {/* New dot pattern */}
@@ -26,7 +27,7 @@ export default function AboutUsSection() {
                         </div>
                         <div className="about-us-counter-card">
                                 <div className="counter-icon-wrapper">
-                                    <FaUserGraduate className="counter-icon" />
+                                    <FaIndustry className="counter-icon" />
                                 </div>
                                 <div className="counter-details">
                                     <p className="counter-number-new">27%</p> {/* Changed content */}

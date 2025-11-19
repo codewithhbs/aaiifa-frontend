@@ -13,7 +13,7 @@ export default function Footer() {
               <div className="footer-widgets">
                 <div className="footer-logo-layout1">
                   <a href="/">
-                    <img src="media/logo.jpg" alt="Logo" className="logo-img" />
+                    <img src="media/logo-footer.png" alt="Logo" className="logo-img" />
                   </a>
                 </div>
                 <div className="footer-contact-info">

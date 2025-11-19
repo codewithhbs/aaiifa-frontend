@@ -78,7 +78,7 @@ const ThreeCardsSection = () => {
                 key={card.id}
                 className={`card ${isVisible ? 'visible' : ''}`}
                 style={{
-                  border: `2px solid ${card.color}`,
+                  border: `1px solid ${card.color}`,
                   boxShadow: `0 4px 6px -1px ${card.color}20, 0 2px 4px -1px ${card.color}10`
                 }}
                 onMouseEnter={(e) => {

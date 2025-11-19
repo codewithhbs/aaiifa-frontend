@@ -1,6 +1,8 @@
 import { Container, Row, Col } from "react-bootstrap";
-import NavDropdown from "react-bootstrap/NavDropdown";  
+import NavDropdown from "react-bootstrap/NavDropdown";
 import React, { useState } from "react";
+import { useLocation } from "react-router-dom";
+
 import {
   FaBars,
   FaTimes,
@@ -12,36 +14,30 @@ import {
 
 export default function Header() {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
-  const [activeLink, setActiveLink] = useState("Home");
-
-  const toggleMenu = () => setMobileMenuOpen(!mobileMenuOpen);
-  const handleLinkClick = (linkName) => {
-    setActiveLink(linkName);
-    setMobileMenuOpen(false);
-  };
-
   const [openDropdown, setOpenDropdown] = useState(null);
 
+  const location = useLocation();
+  const currentPath = location.pathname;
+
+  const toggleMenu = () => setMobileMenuOpen(!mobileMenuOpen);
+
   React.useEffect(() => {
-  const handleResize = () => {
-    if (window.innerWidth > 991 && mobileMenuOpen) {
-      setMobileMenuOpen(false);
-    }
+    const handleResize = () => {
+      if (window.innerWidth > 991 && mobileMenuOpen) {
+        setMobileMenuOpen(false);
+      }
+    };
+    window.addEventListener("resize", handleResize);
+    return () => window.removeEventListener("resize", handleResize);
+  }, [mobileMenuOpen]);
+
+  const toggleDropdown = (name) => {
+    setOpenDropdown(openDropdown === name ? null : name);
   };
-
-  window.addEventListener("resize", handleResize);
-  return () => window.removeEventListener("resize", handleResize);
-}, [mobileMenuOpen]);
-
-
-const toggleDropdown = (name) => {
-  setOpenDropdown(openDropdown === name ? null : name);
-};
-
 
   const navLinks = [
     { name: "Home", href: "/" },
-    { name: "About Us", href: "about-us" },
+    { name: "About Us", href: "/about-us" },
     {
       name: "Our Team",
       dropdown: true,
@@ -80,72 +76,76 @@ const toggleDropdown = (name) => {
     { name: "Contact Us", href: "/contact" },
   ];
 
+  // Helper: checks if any dropdown item matches the URL
+  const isDropdownActive = (items) =>
+    items.some((item) => item.href === currentPath);
+
   return (
     <header>
+
       {/* Topbar */}
-<div id="topbar-wrap" className="topbar-layout1">
-  <Container>
-    <Row className="align-items-center text-center text-lg-start g-2 g-lg-0">
-      {/* Phone */}
-      <Col xs={12} md={4} className="single-item">
-        <FaPhone className="item-icon" />
-        <div className="item-content">
-          <div className="item-title">
-            <span>Call Toll Free:</span>{" "}
-            <a href="tel:911127351345">+011 27351345</a>
-          </div>
-        </div>
-      </Col>
+      <div id="topbar-wrap" className="topbar-layout1">
+        <Container>
+          <Row className="align-items-center text-center text-lg-start g-2 g-lg-0">
+            <Col xs={12} md={4} className="single-item">
+              <FaPhone className="item-icon" />
+              <div className="item-content">
+                <div className="item-title">
+                  <span>Call Toll Free:</span>{" "}
+                  <a href="tel:911127351345">+011 27351345</a>
+                </div>
+              </div>
+            </Col>
 
-      {/* Email */}
-      <Col xs={12} md={4} className="single-item">
-        <FaEnvelope className="item-icon" />
-        <div className="item-content">
-          <div className="item-title">
-            <span>E-mail Us:</span>{" "}
-            <a href="mailto:aaiifa6@gmail.com">aaiifa6@gmail.com</a>
-          </div>
-        </div>
-      </Col>
+            <Col xs={12} md={4} className="single-item">
+              <FaEnvelope className="item-icon" />
+              <div className="item-content">
+                <div className="item-title">
+                  <span>E-mail Us:</span>{" "}
+                  <a href="mailto:aaiifa6@gmail.com">aaiifa6@gmail.com</a>
+                </div>
+              </div>
+            </Col>
 
-      {/* Address */}
-      <Col xs={12} md={4} className="single-item">
-        <FaMapMarkerAlt className="item-icon" />
-        <div className="item-content">
-          <div className="item-title">
-            Pearls Omaxe, Tower-I Netaji Subhash Place, Delhi
-          </div>
-        </div>
-      </Col>
-    </Row>
-  </Container>
-</div>
-
-
+            <Col xs={12} md={4} className="single-item">
+              <FaMapMarkerAlt className="item-icon" />
+              <div className="item-content">
+                <div className="item-title">
+                  Pearls Omaxe, Tower-I Netaji Subhash Place, Delhi
+                </div>
+              </div>
+            </Col>
+          </Row>
+        </Container>
+      </div>
 
       {/* Navbar */}
       <div className="menu-layout1">
         <Container fluid>
           <Row className="header-height align-items-center justify-content-between px-3">
-            <Col xs="6" lg="3">
+
+            <Col xs="8" lg="3">
               <a href="/" className="temp-logo d-inline-block">
-                <img src="media/logo.jpg" alt="Logo" className="logo-img" />
+                <img src="media/logo.png" alt="Logo" className="logo-img" />
               </a>
             </Col>
 
-            {/* Desktop Nav */}
+            {/* Desktop Menu */}
             <Col lg="8" className="d-none d-lg-block text-center">
               <nav className="template-main-menu">
                 <ul className="nav-list">
                   {navLinks.map((link) =>
                     link.dropdown ? (
                       <li key={link.name} className="nav-item">
-                        <NavDropdown title={link.name} id={`dropdown-${link.name}`}>
+                        <NavDropdown
+                          title={link.name}
+                          id={`dropdown-${link.name}`}
+                          className={isDropdownActive(link.items) ? "active" : ""}
+                        >
                           {link.items.map((item) => (
                             <NavDropdown.Item
                               key={item.name}
                               href={item.href}
-                              onClick={() => handleLinkClick(item.name)}
                             >
                               {item.name}
                             </NavDropdown.Item>
@@ -156,8 +156,7 @@ const toggleDropdown = (name) => {
                       <li key={link.name}>
                         <a
                           href={link.href}
-                          className={activeLink === link.name ? "active" : ""}
-                          onClick={() => handleLinkClick(link.name)}
+                          className={currentPath === link.href ? "active" : ""}
                         >
                           {link.name}
                         </a>
@@ -169,7 +168,7 @@ const toggleDropdown = (name) => {
             </Col>
 
             {/* Actions */}
-            <Col xs="6" lg="1" className="text-end">
+            <Col xs="4" lg="1" className="text-end">
               <div className="header-actions">
                 <a href="join-us" className="btn-primary d-none d-lg-inline-block">
                   Join Us
@@ -182,66 +181,70 @@ const toggleDropdown = (name) => {
                 </button>
               </div>
             </Col>
+
           </Row>
         </Container>
 
         {/* Mobile Menu */}
-        {/* Mobile Menu */}
-<div className={`mobile-menu ${mobileMenuOpen ? "open" : ""}`}>
-  <div className="mobile-menu-content">
-    <ul className="mobile-nav-list">
-      {navLinks.map((link) =>
-        link.dropdown ? (
-          <li key={link.name} className="mobile-dropdown">
-            <span
-    className="dropdown-title"
-    onClick={() => toggleDropdown(link.name)}
-  >
-    {link.name}
-    <FaChevronDown
-      className={`dropdown-icon ${
-        openDropdown === link.name ? "rotate" : ""
-      }`}
-    />
-  </span>
+        <div className={`mobile-menu ${mobileMenuOpen ? "open" : ""}`}>
+          <div className="mobile-menu-content">
+            <ul className="mobile-nav-list">
 
-            <ul
-              className={`mobile-submenu ${
-                openDropdown === link.name ? "open" : ""
-              }`}
-            >
-              {link.items.map((item) => (
-                <li key={item.name}>
-                  <a
-                    href={item.href}
-                    onClick={() => handleLinkClick(item.name)}
-                  >
-                    {item.name}
-                  </a>
-                </li>
-              ))}
+              {navLinks.map((link) =>
+                link.dropdown ? (
+                  <li key={link.name} className="mobile-dropdown">
+                    <span
+                      className={`dropdown-title ${
+                        isDropdownActive(link.items) ? "active" : ""
+                      }`}
+                      onClick={() => toggleDropdown(link.name)}
+                    >
+                      {link.name}
+                      <FaChevronDown
+                        className={`dropdown-icon ${
+                          openDropdown === link.name ? "rotate" : ""
+                        }`}
+                      />
+                    </span>
+
+                    <ul
+                      className={`mobile-submenu ${
+                        openDropdown === link.name ? "open" : ""
+                      }`}
+                    >
+                      {link.items.map((item) => (
+                        <li key={item.name}>
+                          <a
+                            href={item.href}
+                            className={currentPath === item.href ? "active" : ""}
+                          >
+                            {item.name}
+                          </a>
+                        </li>
+                      ))}
+                    </ul>
+                  </li>
+                ) : (
+                  <li key={link.name}>
+                    <a
+                      href={link.href}
+                      className={currentPath === link.href ? "active" : ""}
+                    >
+                      {link.name}
+                    </a>
+                  </li>
+                )
+              )}
+
+              <li className="mobile-cta">
+                <a href="join-us" className="btn-primary-mobile">
+                  Join Us
+                </a>
+              </li>
+
             </ul>
-          </li>
-        ) : (
-          <li key={link.name}>
-            <a
-              href={link.href}
-              onClick={() => handleLinkClick(link.name)}
-            >
-              {link.name}
-            </a>
-          </li>
-        )
-      )}
-
-      <li className="mobile-cta">
-        <a href="join-us" className="btn-primary-mobile">
-          Join Us
-        </a>
-      </li>
-    </ul>
-  </div>
-</div>
+          </div>
+        </div>
 
       </div>
     </header>
