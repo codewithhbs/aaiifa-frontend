@@ -10192,3 +10192,35 @@ body.sticky-header {
     width: 100%;    /* small mobile screens */
   }
 }
+/* dropdown  */
+.mobile-submenu {
+  display: none;
+  padding-left: 15px;
+}
+
+.mobile-submenu.open {
+  display: block;
+}
+
+.dropdown-title {
+  display: flex;
+  justify-content: space-between;
+  cursor: pointer;
+  padding: 10px 0;
+  font-weight: 600;
+}
+.mobile-nav-list .mobile-dropdown{
+ padding: 12px 10px;
+}  
+/* icon dropdowen */
+
+.dropdown-icon {
+  transition: transform 0.3s ease;
+  font-size: 14px;
+}
+
+.dropdown-icon.rotate {
+  transform: rotate(180deg);
+}
+
+

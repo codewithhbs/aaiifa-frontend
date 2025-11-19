@@ -44,12 +44,12 @@ const ContactSection = () => {
 
       <div className="contact-container">
         <div className="contact-grid">
-          
+
           {/* Contact Information */}
           <div className="contact-info">
             <div className="contact-header">
               <h1 className="contact-title">Contact Us</h1>
-              <div className="title-underline"></div>
+              {/* <div className="title-underline"></div> */}
             </div>
 
             <div className="contact-item">
@@ -61,12 +61,8 @@ const ContactSection = () => {
               </div>
               <div className="contact-details">
                 <h3 className="contact-subtitle">Address</h3>
-                <p>504, Pearls Omaxe, Tower- I</p>
-                <p>Netaji Subhash Place, Pitampurae</p>
-                <p>
-
-New Delhi-110034
-</p>
+                <p>504, Pearls Omaxe, Tower- I Netaji Subhash Place, Pitampurae  New Delhi-110034
+                </p>
               </div>
             </div>
 
@@ -79,9 +75,9 @@ New Delhi-110034
               <div className="contact-details">
                 <h3 className="contact-subtitle">E-mail Address</h3>
                 <a href="mailto:
-aaiifa6@gmail.com" className="email-link">
-                  
-aaiifa6@gmail.com
+aaiifa6@gmail.com" className="text-dark">
+
+                  aaiifa6@gmail.com
                 </a>
               </div>
             </div>

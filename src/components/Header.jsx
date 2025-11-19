@@ -1,5 +1,5 @@
 import { Container, Row, Col } from "react-bootstrap";
-import NavDropdown from "react-bootstrap/NavDropdown";
+import NavDropdown from "react-bootstrap/NavDropdown";  
 import React, { useState } from "react";
 import {
   FaBars,
@@ -7,6 +7,7 @@ import {
   FaPhone,
   FaEnvelope,
   FaMapMarkerAlt,
+  FaChevronDown,
 } from "react-icons/fa";
 
 export default function Header() {
@@ -18,6 +19,25 @@ export default function Header() {
     setActiveLink(linkName);
     setMobileMenuOpen(false);
   };
+
+  const [openDropdown, setOpenDropdown] = useState(null);
+
+  React.useEffect(() => {
+  const handleResize = () => {
+    if (window.innerWidth > 991 && mobileMenuOpen) {
+      setMobileMenuOpen(false);
+    }
+  };
+
+  window.addEventListener("resize", handleResize);
+  return () => window.removeEventListener("resize", handleResize);
+}, [mobileMenuOpen]);
+
+
+const toggleDropdown = (name) => {
+  setOpenDropdown(openDropdown === name ? null : name);
+};
+
 
   const navLinks = [
     { name: "Home", href: "/" },
@@ -166,47 +186,63 @@ export default function Header() {
         </Container>
 
         {/* Mobile Menu */}
-        <div
-          className={`mobile-menu ${mobileMenuOpen ? "open" : ""}`}
-        >
-          <div className="mobile-menu-content">
-            <ul className="mobile-nav-list">
-              {navLinks.map((link) =>
-                link.dropdown ? (
-                  <li key={link.name} className="mobile-dropdown">
-                    <span className="dropdown-title">{link.name}</span>
-                    <ul className="mobile-submenu">
-                      {link.items.map((item) => (
-                        <li key={item.name}>
-                          <a
-                            href={item.href}
-                            onClick={() => handleLinkClick(item.name)}
-                          >
-                            {item.name}
-                          </a>
-                        </li>
-                      ))}
-                    </ul>
-                  </li>
-                ) : (
-                  <li key={link.name}>
-                    <a
-                      href={link.href}
-                      onClick={() => handleLinkClick(link.name)}
-                    >
-                      {link.name}
-                    </a>
-                  </li>
-                )
-              )}
-              <li className="mobile-cta">
-                <a href="join-us" className="btn-primary-mobile">
-                  Join Us
-                </a>
-              </li>
+        {/* Mobile Menu */}
+<div className={`mobile-menu ${mobileMenuOpen ? "open" : ""}`}>
+  <div className="mobile-menu-content">
+    <ul className="mobile-nav-list">
+      {navLinks.map((link) =>
+        link.dropdown ? (
+          <li key={link.name} className="mobile-dropdown">
+            <span
+    className="dropdown-title"
+    onClick={() => toggleDropdown(link.name)}
+  >
+    {link.name}
+    <FaChevronDown
+      className={`dropdown-icon ${
+        openDropdown === link.name ? "rotate" : ""
+      }`}
+    />
+  </span>
+
+            <ul
+              className={`mobile-submenu ${
+                openDropdown === link.name ? "open" : ""
+              }`}
+            >
+              {link.items.map((item) => (
+                <li key={item.name}>
+                  <a
+                    href={item.href}
+                    onClick={() => handleLinkClick(item.name)}
+                  >
+                    {item.name}
+                  </a>
+                </li>
+              ))}
             </ul>
-          </div>
-        </div>
+          </li>
+        ) : (
+          <li key={link.name}>
+            <a
+              href={link.href}
+              onClick={() => handleLinkClick(link.name)}
+            >
+              {link.name}
+            </a>
+          </li>
+        )
+      )}
+
+      <li className="mobile-cta">
+        <a href="join-us" className="btn-primary-mobile">
+          Join Us
+        </a>
+      </li>
+    </ul>
+  </div>
+</div>
+
       </div>
     </header>
   );

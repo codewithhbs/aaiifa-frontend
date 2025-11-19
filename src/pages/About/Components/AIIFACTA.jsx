@@ -8,7 +8,10 @@ export default function AIIFACTA() {
           <h2 className="aiifa-cta-title mb-3 mb-md-0">
             ALL INDIA INDUCTION FURNACES ASSOCIATION
           </h2>
-          <button className="aiifa-cta-btn">GET A QUOTE</button>
+          <a href="/contact" target="_blank" rel="noopener noreferrer">
+            <button className="aiifa-cta-btn">GET A QUOTE</button>
+          </a>
+
         </div>
       </div>
     </section>
