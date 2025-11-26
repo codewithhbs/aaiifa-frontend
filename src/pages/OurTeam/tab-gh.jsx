@@ -24,7 +24,7 @@ const GoverningBodies = [
   },
   {
     name: "Shri Ashok Garg",
-    title: "Sr. Vice President (Hon. Treasurer)",
+    title: "Sr. Vice President ( Treasurer)",
     company: "M/s Reby Castings Pvt Ltd",
     img: "media/team/ashok-garg.png",
   },
@@ -286,7 +286,7 @@ export default function OurTeam() {
                   <h4 className="our-team-name">{member.name}</h4>
                   <p className="our-team-role">{member.title}</p>
                   <p className="our-team-company">{member.company}</p>
-                  
+
                 </div>
               ))}
             </div>

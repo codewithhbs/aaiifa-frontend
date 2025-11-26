@@ -43,8 +43,8 @@ export default function Header() {
       dropdown: true,
       items: [
         { name: "Governing Bodies", href: "/governing-bodies" },
-        { name: "Life Member", href: "/life-members" },
         { name: "National Council Member", href: "/national-member" },
+        { name: "Life Member", href: "/life-members" },
         { name: "Active Member", href: "/active-member" },
       ],
     },

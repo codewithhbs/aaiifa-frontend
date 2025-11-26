@@ -22,7 +22,7 @@ const teamMembers = [
   {
     name: "Shri Yogesh Mandhani",
     title: "President",
-    company: "M/s SMW Ispat (P) Ltd",
+    company: "Varad Ferro Alloys Pvt. Ltd.",
     img: "http://hoverbusinessservices.com/cloud/aiifa/media/team/Ygesh-Mandhani-Ji-Image.jpg",
   },
   {
@@ -39,7 +39,7 @@ const teamMembers = [
   },
   {
     name: "Shri Ashok Garg",
-    title: "Sr. Vice President (Hon. Treasurer)",
+    title: "Sr. Vice President ( Treasurer)",
     company: "M/s Reby Castings Pvt Ltd",
     img: "http://hoverbusinessservices.com/cloud/aiifa/media/team/ashok-garg.png",
   },
@@ -58,7 +58,7 @@ const teamMembers = [
   {
     name: "Shri Sandeep Jain",
     title: "Patron",
-    company: "M/s Trishala Alloys Pvt. Ltd.",
+    company: "Trishala Alloys Pvt. Ltd.",
     img: "http://hoverbusinessservices.com/cloud/aiifa/media/team/sandeep.jpg",
   },
   {

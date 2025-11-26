@@ -71,8 +71,8 @@ const LifeMembers = [
     name: "Shri Sandeep Jain",
     desc: "LM-09",
     title: "Director",
-    company: "Antarctic Industries Ltd",
-    img: "http://hoverbusinessservices.com/cloud/aiifa/media/members/user.png",
+    company: "Trishala Alloys Pvt. Ltd.",
+    img: "http://hoverbusinessservices.com/cloud/aiifa/media/team/sandeep.jpg",
   },
   {
     id: "LM-10",
