@@ -47,8 +47,8 @@ const teamMembers = [
   },
   {
     name: "Shri Ashok Garg",
-    title: "Sr. Vice President ",
-    company: "Treasurer",
+    title: "Treasurer",
+    company: "M/s Reby Castings Pvt Ltd",
     img: "media/team/ashok-garg.png",
   },
 ];

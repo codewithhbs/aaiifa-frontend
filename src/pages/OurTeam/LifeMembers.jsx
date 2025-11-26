@@ -110,8 +110,8 @@ const LifeMembers = [
     id: "LM-14",
     name: "Shri Ashok Garg",
     desc: "LM-14",
-    title: "Director",
-    company: "Treasurer",
+    title: "Treasurer",
+    company: "M/s Reby Castings Pvt Ltd",
     img: "http://hoverbusinessservices.com/cloud/aiifa/media/members/Shri Ashok Garg.png",
   },
   {

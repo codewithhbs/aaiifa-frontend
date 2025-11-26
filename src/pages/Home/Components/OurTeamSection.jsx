@@ -39,8 +39,8 @@ const teamMembers = [
   },
   {
     name: "Shri Ashok Garg",
-    title: "Sr. Vice President",
-    company: "Treasurer",
+    title: "Treasurer",
+    company: "M/s Reby Castings Pvt Ltd",
     img: "http://hoverbusinessservices.com/cloud/aiifa/media/team/ashok-garg.png",
   },
   {
