@@ -286,6 +286,7 @@ export default function OurTeam() {
                   <h4 className="our-team-name">{member.name}</h4>
                   <p className="our-team-role">{member.title}</p>
                   <p className="our-team-company">{member.company}</p>
+                  
                 </div>
               ))}
             </div>
