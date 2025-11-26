@@ -48,8 +48,8 @@ const NationalMember = [
   },
   {
     name: "Shri Ashok Garg",
-    title: "Sr. Vice President ( Treasurer)",
-    company: "M/s Reby Castings Pvt Ltd",
+    title: "Sr. Vice President",
+    company: "Treasurer",
     img: "media/team/ashok-garg.png",
   },
   {
@@ -111,12 +111,6 @@ const NationalMember = [
     title: "Vice President",
     company: "M/s Premium Ferro Alloys Limited",
     img: "http://hoverbusinessservices.com/cloud/aiifa/media/members/shri-s.s.-agarwal.png",
-  },
-  {
-    name:"Shri K. K. Garg",
-    title:"Northern Zonal Chairman",
-    comapny:"M/s Sharu Steels Limited",
-    img: "http://hoverbusinessservices.com/cloud/aiifa/media/members/shri-k. k.-garg.jpg",
   },
   {
     name:"N.D.Rao",
@@ -259,7 +253,7 @@ export default function GoverningBodies() {
       <section className="our-team-section">
         <div className="our-team-container">
           <p className="our-team-subtitle mb-4">Our National Council Members</p>
-          <h2 className="our-team-title text-white">Our Team</h2>
+          {/* <h2 className="our-team-title text-white">Our Team</h2> */}
 
           {/* Search Bar */}
           

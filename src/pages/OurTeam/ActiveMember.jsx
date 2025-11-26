@@ -1892,8 +1892,8 @@ export default function ActiveMembers() {
       
       <section className="our-team-section">
         <div className="our-team-container">
-          <p className="our-team-subtitle">Active MEMBER</p>
-          <h2 className="our-team-title text-white">Our Team</h2>
+          <p className="our-team-subtitle mb-4">Active MEMBER</p>
+          {/* <h2 className="our-team-title text-white">Our Team</h2> */}
 
           {/* Search Bar */}
           

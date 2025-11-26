@@ -111,7 +111,7 @@ const LifeMembers = [
     name: "Shri Ashok Garg",
     desc: "LM-14",
     title: "Director",
-    company: "Reby Castings Pvt. Ltd",
+    company: "Treasurer",
     img: "http://hoverbusinessservices.com/cloud/aiifa/media/members/Shri Ashok Garg.png",
   },
   {
@@ -227,8 +227,8 @@ export default function GoverningBodies() {
       
       <section className="our-team-section">
         <div className="our-team-container">
-          <p className="our-team-subtitle">NATIONAL MEMBER</p>
-          <h2 className="our-team-title text-white">Our Team</h2>
+          <p className="our-team-subtitle mb-4">LIFE MEMBER</p>
+          {/* <h2 className="our-team-title text-white">Our Team</h2> */}
 
           {/* Search Bar */}
           
