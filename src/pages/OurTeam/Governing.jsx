@@ -29,19 +29,19 @@ const teamMembers = [
   },
   {
     name: "Shri K.K. Garg",
-    title: "Director",
+    title: "Former President",
     company: "Sharu Steels Limited",
     img: "http://hoverbusinessservices.com/cloud/aiifa/media/members/shri-k. k.-garg.jpg",
   },
   {
     name: "Shri Sandeep Jain",
-    title: "Director",
+    title: "Former President",
     company: "Trishala Alloys Pvt. Ltd.",
     img: "http://hoverbusinessservices.com/cloud/aiifa/media/team/sandeep.jpg",
   },
   {
     name: "Shri Devendra Kumar Agrawal",
-    title: "Immediate Past President",
+    title: "Former President",
     company: "M/s Kashi Vishwanath Steels Ltd.",
     img: "media/team/g2.png",
   },
