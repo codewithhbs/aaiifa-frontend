@@ -3,29 +3,12 @@ import { Search } from "lucide-react";
 import './style.css'
 
 const NationalMember = [
+  
   {
     name: "Shri Yogesh Mandhani",
     title: "President",
     company: "M/s SMW Ispat (P) Ltd",
     img: "media/team/Ygesh-Mandhani-Ji-Image.jpg",
-  },
-  {
-    name: "Shri Gopal Gupta",
-    title: "President Emeritus",
-    company: "M/s Laxcon Steel Ltd",
-    img: "http://hoverbusinessservices.com/cloud/aiifa/media/members/user.png",
-  },
-  {
-    name: "Shri Devendra Kumar Agrawal",
-    title: "Immediate Past President",
-    company: "M/s Kashi Vishwanath Steels Ltd.",
-    img: "http://hoverbusinessservices.com/cloud/aiifa/media/members/shri -devendra-kumar -agrawal.png",
-  },
-  {
-    name: "Shri Ashok Garg",
-    title: "Sr. Vice President (Hon. Treasurer)",
-    company: "M/s Reby Castings Pvt Ltd",
-    img: "media/team/ashok-garg.png",
   },
   {
     name: "Shri Kamal Aggarwal",
@@ -34,16 +17,40 @@ const NationalMember = [
     img: "media/team/NIFS-Steels-Kamal-Sir-photo.jpg",
   },
   {
+    name: "Shri Gopal Gupta",
+    title: "President Emeritus",
+    company: "M/s Laxcon Steel Ltd",
+    img: "media/team/Gopal-sir-photo-nc.jpg",
+  },
+  {
     name: "Shri Jitendra Singh",
-    title: "Patron",
+    title: "Former President",
     company: "M/s ISC Machines Pvt Ltd",
     img: "http://hoverbusinessservices.com/cloud/aiifa/media/members/shri-jitendra-singh.jpg",
   },
   {
+    name: "Shri K.K. Garg",
+    title: "Director",
+    company: "Sharu Steels Limited",
+    img: "http://hoverbusinessservices.com/cloud/aiifa/media/members/shri-k. k.-garg.jpg",
+  },
+  {
     name: "Shri Sandeep Jain",
-    title: "Patron",
-    company: "M/s Trishala Alloys Pvt. Ltd.",
-    img: "http://hoverbusinessservices.com/cloud/aiifa/media/members/shri-sandee- jain.png",
+    title: "Director",
+    company: "Antarctic Industries Ltd",
+    img: "http://hoverbusinessservices.com/cloud/aiifa/media/members/user.png",
+  },
+  {
+    name: "Shri Devendra Kumar Agrawal",
+    title: "Immediate Past President",
+    company: "M/s Kashi Vishwanath Steels Ltd.",
+    img: "media/team/g2.png",
+  },
+  {
+    name: "Shri Ashok Garg",
+    title: "Sr. Vice President (Hon. Treasurer)",
+    company: "M/s Reby Castings Pvt Ltd",
+    img: "media/team/ashok-garg.png",
   },
   {
     name: "Shri Ashok Surana",
@@ -227,9 +234,9 @@ const NationalMember = [
     img: "http://hoverbusinessservices.com/cloud/aiifa/media/members/user.png",
   },
   {
-    name:"Shri Amit Gupta Kasaniya",
+    name:"Shri Nimit Aggarwal",
     title:"National Council Member",
-    comapny:"M/s Hari Iron (India) Ltd.",
+    comapny:"NIFS Steels LLP ",
     img: "http://hoverbusinessservices.com/cloud/aiifa/media/members/user.png",
   },
   

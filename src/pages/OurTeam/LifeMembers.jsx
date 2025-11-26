@@ -148,10 +148,10 @@ const LifeMembers = [
   },
   {
     id: "LM-19",
-    name: "Shri Vats Rathi",
+    name: "Shri Nimit Aggarwal",
     desc: "LM-19",
     title: "Director",
-    company: "Rathi TMT Saria P. Ltd.",
+    company: "NIFS Steels LLP ",
     img: "http://hoverbusinessservices.com/cloud/aiifa/media/members/user.png",
   },
   {

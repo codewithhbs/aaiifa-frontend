@@ -1934,7 +1934,7 @@ header {
   line-height: 1;
   display: block;
   transition: all 0.3s ease-out;
-  color: #333;
+  color:#000000;
   padding: 15px 17px; /* Ample padding for click area */
   text-decoration: none;
   position: relative;

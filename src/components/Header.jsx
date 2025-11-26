@@ -87,31 +87,31 @@ export default function Header() {
       <div id="topbar-wrap" className="topbar-layout1">
         <Container>
           <Row className="align-items-center text-center text-lg-start g-2 g-lg-0">
-            <Col xs={12} md={4} className="single-item">
+            <Col xs={12} md={2} className="single-item">
               <FaPhone className="item-icon" />
               <div className="item-content">
                 <div className="item-title">
-                  <span>Call Toll Free:</span>{" "}
-                  <a href="tel:911127351345">+011 27351345</a>
+                  <span>Call:</span>{" "}
+                  <a href="tel:911127351345">+011-42725051</a>
                 </div>
               </div>
             </Col>
 
-            <Col xs={12} md={4} className="single-item">
+            <Col xs={12} md={5} className="single-item">
               <FaEnvelope className="item-icon" />
               <div className="item-content">
                 <div className="item-title">
                   <span>E-mail Us:</span>{" "}
-                  <a href="mailto:aaiifa6@gmail.com">aaiifa6@gmail.com</a>
+                  <a href="mailto:aaiifa6@gmail.com">aaiifa6@gmail.com</a>, <a href="mailto:aiifa.steelex@aaiifa.org">aiifa.steelex@aaiifa.org</a>
                 </div>
               </div>
             </Col>
 
-            <Col xs={12} md={4} className="single-item">
+            <Col xs={12} md={5} className="single-item">
               <FaMapMarkerAlt className="item-icon" />
               <div className="item-content">
                 <div className="item-title">
-                  Pearls Omaxe, Tower-I Netaji Subhash Place, Delhi
+                  Pearls Omaxe, Tower-I Netaji Subhash Place, Pitampura, Delhi-110034
                 </div>
               </div>
             </Col>
