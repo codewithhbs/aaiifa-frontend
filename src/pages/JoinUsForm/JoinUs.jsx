@@ -123,7 +123,7 @@ const AIIFAMembershipForm = () => {
           AIIFA Sustainable Steel Manufacturers Association
         </div>
         <div className="former-name">
-          (Formerly known as All India Induction Furnaces Association)
+          (Formerly known as AIIFA Sustainable Steel Manufacturers Association)
         </div>
         <div className="tagline">
           (Voice of Indian Sustainable Steel Manufacturing Sector)

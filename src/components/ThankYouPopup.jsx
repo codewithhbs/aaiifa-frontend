@@ -5,8 +5,16 @@ const ThankYouPopup = () => {
   const [show, setShow] = useState(false);
 
   useEffect(() => {
-    const timer = setTimeout(() => setShow(true), 8000);
-    return () => clearTimeout(timer);
+    const alreadyShown = localStorage.getItem("thankYouPopupShown");
+
+    if (!alreadyShown) {
+      const timer = setTimeout(() => {
+        setShow(true);
+        localStorage.setItem("thankYouPopupShown", "true");
+      }, 8000);
+
+      return () => clearTimeout(timer);
+    }
   }, []);
 
   if (!show) return null;
@@ -83,10 +91,16 @@ const ThankYouPopup = () => {
           <a href="https://x.com/SteelEx_AIIFA" className="twitter">
             <i className="fab fa-twitter"></i>
           </a>
-          <a href="https://www.youtube.com/channel/UCgX9MQQDCQgP0cryzxKlGkw" className="youtube">
+          <a
+            href="https://www.youtube.com/channel/UCgX9MQQDCQgP0cryzxKlGkw"
+            className="youtube"
+          >
             <i className="fab fa-youtube"></i>
           </a>
-          <a href="https://www.instagram.com/steelex_aiifa/" className="instagram">
+          <a
+            href="https://www.instagram.com/steelex_aiifa/"
+            className="instagram"
+          >
             <i className="fab fa-instagram"></i>
           </a>
         </div>

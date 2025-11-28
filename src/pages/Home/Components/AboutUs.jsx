@@ -42,7 +42,7 @@ export default function AboutUsSection() {
                         <h2 className="our-team-title"> Know About Our Organization</h2> {/* Reusing existing title class */}
                         
                         <p className="about-us-description">
-                            All India Induction Furnaces Association (AIIFA) being the premier
+                            AIIFA Sustainable Steel Manufacturers Association being the premier
                             steel industry association of Electric Induction Furnaces in the
                             country represents a major section of steel units, producing steel
                             through this route. There are over 1000 Induction furnace units

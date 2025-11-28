@@ -17,7 +17,7 @@ export default function InnerBannerSection() {
             </div>
             <div className="banner-btn-wrapper">
               <a href="/contact" className="inner-banner-btn">
-                Get A Quote
+                Reach Us
               </a>
             </div>
           </div>

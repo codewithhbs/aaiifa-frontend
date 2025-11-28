@@ -38,7 +38,7 @@ export default function AboutUsSection() {
                         <h2 className="our-team-title"> Know About Our Organization</h2> {/* Reusing existing title class */}
                         
                         <p className="about-us-description">
-                            The All India Induction Furnaces Association (AIIFA) represents a major segment of India’s steel sector, especially units operating through Electric Induction Furnaces. With over 1000 furnace units and 1200 rolling mills nationwide, the industry produces nearly 30 million tonnes of steel annually—about 27% of the country’s crude steel output.
+                            The AIIFA Sustainable Steel Manufacturers Association represents a major segment of India’s steel sector, especially units operating through Electric Induction Furnaces. With over 1000 furnace units and 1200 rolling mills nationwide, the industry produces nearly 30 million tonnes of steel annually—about 27% of the country’s crude steel output.
                         </p>
                         <p className="about-us-description">
                             It provides direct employment to over 2 million people and supports 3 million more. AIIFA works as a vital link between the Government and industry, promoting schemes, guiding research participation, addressing sectoral issues, and spreading awareness of policies to enhance quality, capacity, and reduce emissions.
