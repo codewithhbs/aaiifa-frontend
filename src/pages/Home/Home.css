@@ -1658,6 +1658,11 @@ text-align: start;
     gap: 30px; /* Increased gap for wider cards */
   }
 }
+.about-us-btn-wrapper {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
 
 /* Cards - Only width increased */
 .card {
