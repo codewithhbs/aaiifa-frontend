@@ -8,7 +8,6 @@ const DirectorySaleQuery = () => {
       <div className="directory-query-container">
         {/* Left: Query Form */}
         <div className="directory-form">
-          <p className="query-subtitle">Have Questions?</p>
           <h2 className="query-title">Directory Sale Query</h2>
 
           <form className="query-form">

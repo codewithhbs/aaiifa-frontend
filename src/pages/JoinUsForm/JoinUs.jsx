@@ -506,7 +506,7 @@ const AIIFAMembershipForm = () => {
                   />
                 </div>
                 <div className="input-group">
-                  <span className="input-label">INDIGENEOUS SCRAP:</span>
+                  <span className="input-label">INDIGENOUS SCRAP:</span>
                   <input
                     type="text"
                     name="indigenousScrap"

@@ -70,6 +70,7 @@ export default function Header() {
       items: [
         { name: "Past Event", href: "/past-events" },
         { name: "Event Video", href: "/past-videos" },
+        { name: "Our Upcoming Events", href: "#" },
       ],
     },
     { name: "Directory Sale", href: "/directory-sale" },
@@ -111,7 +112,7 @@ export default function Header() {
               <FaMapMarkerAlt className="item-icon" />
               <div className="item-content">
                 <div className="item-title">
-                  Pearls Omaxe, Tower-I Netaji Subhash Place, Pitampura, Delhi-110034
+                  <a href="https://maps.app.goo.gl/syV66SVGv9rKbR7Q7">Pearls Omaxe, Tower-I Netaji Subhash Place, Pitampura, Delhi-110034</a>
                 </div>
               </div>
             </Col>

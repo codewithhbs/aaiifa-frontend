@@ -18,11 +18,9 @@ export default function Footer() {
                 </div>
                 <div className="footer-contact-info">
                   <div className="contact-address mb-2">
-                    <p className="address-text">
-                      504, Pearls Omaxe, Tower- I Netaji Subhash Place,
-                      <br />
-                       Pitampura New Delhi-110034
-                    </p>
+                    <a href="https://maps.app.goo.gl/syV66SVGv9rKbR7Q7" className="address-text">
+                      504, Pearls Omaxe, Tower- I Netaji Subhash Place, Pitampura New Delhi-110034
+                    </a>
                   </div>
                   <ul className="footer-contact-layout1">
                     <li>
@@ -36,6 +34,10 @@ export default function Footer() {
                     <li>
                       <i className="fas fa-envelope mx-1"> </i>
                       <span className="contact-text text-light"><a href="mailto:aaiifa6@gmail.com" className="text-light">aaiifa6@gmail.com</a></span>
+                    </li>
+                    <li>
+                      <i className="fas fa-envelope mx-1"> </i>
+                      <span className="contact-text text-light"><a href="mailto:aiifa.steelex@aaiifa.org" className="text-light">aiifa.steelex@aaiifa.org</a></span>
                     </li>
                   </ul>
                 </div>
