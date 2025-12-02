@@ -6,7 +6,7 @@ import InnerBannerSection from './Components/InnerBannerSection.jsx';
 import OurStrategySection from './Components/OurStrategySection.jsx';
 import OurEventsSection from './Components/OurEventsSection.jsx';
 import OurBrands from './Components/OurBrands.jsx';
-import Testimonials from './Components/Testimonials.jsx';
+// import Testimonials from './Components/Testimonials.jsx';
 import './Home.css';
 
 export default function Home() {
@@ -15,10 +15,10 @@ export default function Home() {
        <BannerSlider />
        <AboutUsSection />
        <OurTeamSection />
+       <InnerBannerSection />
        <OurEventsSection />
        <OurStrategySection />
-       <Testimonials />
-       <InnerBannerSection />
+       {/* <Testimonials /> */}
         <OurBrands />
      </>
   )

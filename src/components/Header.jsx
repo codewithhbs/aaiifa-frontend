@@ -37,7 +37,7 @@ export default function Header() {
 
   const navLinks = [
     { name: "Home", href: "/" },
-    { name: "About Us", href: "/about-us" },
+    { name: "About", href: "/about-us" },
     {
       name: "Our Team",
       dropdown: true,
@@ -73,8 +73,8 @@ export default function Header() {
         { name: "Our Upcoming Events", href: "#" },
       ],
     },
-    { name: "Directory Sale", href: "/directory-sale" },
-    { name: "Contact Us", href: "/contact" },
+    { name: "Steel Handbook", href: "/steel-handbook" },
+    { name: "Contact", href: "/contact" },
   ];
 
   // Helper: checks if any dropdown item matches the URL
@@ -87,8 +87,8 @@ export default function Header() {
       {/* Topbar */}
       <div id="topbar-wrap" className="topbar-layout1">
         <Container>
-          <Row className="align-items-center text-center text-lg-start g-2 g-lg-0">
-            <Col xs={12} md={2} className="single-item">
+          <Row className="align-items-center text-lg-start g-2 g-lg-0">
+            <Col xs={12} md={2} xl={2} className="single-item">
               <FaPhone className="item-icon" />
               <div className="item-content">
                 <div className="item-title">
@@ -98,7 +98,7 @@ export default function Header() {
               </div>
             </Col>
 
-            <Col xs={12} md={5} className="single-item">
+            <Col xs={12} md={4} xl={3} className="single-item">
               <FaEnvelope className="item-icon" />
               <div className="item-content">
                 <div className="item-title">
@@ -108,13 +108,26 @@ export default function Header() {
               </div>
             </Col>
 
-            <Col xs={12} md={5} className="single-item">
+            <Col xs={12} md={4} xl={4} className="single-item">
               <FaMapMarkerAlt className="item-icon" />
               <div className="item-content">
                 <div className="item-title">
                   <a href="https://maps.app.goo.gl/syV66SVGv9rKbR7Q7">Pearls Omaxe, Tower-I Netaji Subhash Place, Pitampura, Delhi-110034</a>
                 </div>
               </div>
+            </Col>
+            <Col xs={12} md={2} xl={3}  className="single-item">
+            <div className="header-btn">
+               <a href="https://docs.google.com/forms/d/e/1FAIpQLSf8mtYOUJoZu0vTAsc_sFm4ovsWDNfi6OZ8_cSVgnWmxj1ytw/viewform" target="_black" className="btn-primary d-none d-lg-inline-block">
+                  Enlist Your Company Here
+                </a>
+                <button
+                  onClick={toggleMenu}
+                  className="mobile-menu-toggle d-lg-none"
+                >
+                  {mobileMenuOpen ? <FaTimes /> : <FaBars />}
+                </button>
+                </div>
             </Col>
           </Row>
         </Container>
@@ -125,7 +138,7 @@ export default function Header() {
         <Container fluid>
           <Row className="header-height align-items-center justify-content-between px-3">
 
-            <Col xs="8" lg="4">
+            <Col xs="8" lg="3">
               <a href="/" className="temp-logo d-inline-block">
                 <img src="media/logo.png" alt="Logo" className="logo-img" />
               </a>
@@ -169,10 +182,10 @@ export default function Header() {
             </Col>
 
             {/* Actions */}
-            <Col xs="4" lg="1" className="text-end">
+            <Col xs="4" lg="2" className="text-end">
               <div className="header-actions">
                 <a href="join-us" className="btn-primary d-none d-lg-inline-block">
-                  Join Us
+                  Become A Member
                 </a>
                 <button
                   onClick={toggleMenu}
@@ -239,7 +252,7 @@ export default function Header() {
 
               <li className="mobile-cta">
                 <a href="join-us" className="btn-primary-mobile">
-                  Join Us
+                  Become A Member
                 </a>
               </li>
 

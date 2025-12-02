@@ -30,9 +30,11 @@ const teamMembers = [
   {
     name: "Shri K.K. Garg",
     title: "Former President",
+    subtitle: "(Northern Zonal Chairman)",
     company: "Sharu Steels Limited",
-    img: "http://hoverbusinessservices.com/cloud/aiifa/media/members/shri-k. k.-garg.jpg",
+    img: "http://hoverbusinessservices.com/cloud/aiifa/media/members/shri-k.%20k.-garg.jpg",
   },
+
   {
     name: "Shri Sandeep Jain",
     title: "Former President",
@@ -64,29 +66,64 @@ export default function GoverningBodies() {
 
   return (
     <>
-      
+
       <section className="our-team-section">
         <div className="our-team-container">
           <p className="our-team-subtitle mb-4">Our GOVERNING BODIES</p>
           {/* <h2 className="our-team-title text-white">Our Team</h2> */}
 
           {/* Search Bar */}
-          
+          {/* ✅ Search Bar */}
+          <div className="our-team-search-wrapper">
+            <div className="our-team-search-box">
+              <Search size={18} className="our-team-search-icon" />
+              <input
+                type="text"
+                placeholder="Search by name or company..."
+                value={searchTerm}
+                onChange={(e) => setSearchTerm(e.target.value)}
+                className="our-team-search-input"
+              />
+            </div>
+          </div>
+
 
           <div className="our-team-grid">
             {filteredMembers.map((member, index) => (
-              <div className="our-team-card" key={index}>
-                <div className="our-team-img-wrapper">
-                  <img
-                    src={member.img}
-                    alt={member.name}
-                    className="our-team-img"
-                  />
+              <div className="our-team-flip-card" key={index}>
+                <div className="our-team-flip-inner">
+
+                  {/* FRONT SIDE */}
+                  <div className="our-team-flip-front">
+                    <div className="our-team-img-wrapper">
+                      <img
+                        src={member.img}
+                        alt={member.name}
+                        className="our-team-img"
+                      />
+                    </div>
+                    <h4 className="our-team-name">{member.name}</h4>
+                    <p className="our-team-role">{member.title}</p>
+                    {member.subtitle && (
+                      <p className="our-team-subtitle-br">{member.subtitle}</p>
+                    )}
+                    <p className="our-team-company">{member.company}</p>
+                  </div>
+
+                  {/* BACK SIDE */}
+                  <div className="our-team-flip-back">
+                    <h4>{member.name}</h4>
+                    <p><strong>Role:</strong> {member.title}</p>
+                    {member.subtitle && <p>{member.subtitle}</p>}
+                    <p><strong>Company:</strong> {member.company}</p>
+
+                    {/* ✅ You can add anything here later */}
+                    <p className="flip-note">AIIFA National Member</p>
+                  </div>
+
                 </div>
-                <h4 className="our-team-name">{member.name}</h4>
-                <p className="our-team-role">{member.title}</p>
-                <p className="our-team-company">{member.company}</p>
               </div>
+
             ))}
           </div>
         </div>

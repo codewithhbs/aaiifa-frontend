@@ -36,7 +36,7 @@
     transform: rotate(360deg);
   }
 }
-.footer-bottom-content a{
+.our-team-card .footer-bottom-content a{
   color: white;
     background: #b40303;
     padding: 4px;

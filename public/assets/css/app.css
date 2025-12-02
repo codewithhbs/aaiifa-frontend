@@ -1822,9 +1822,9 @@ header {
 
 /* On large screens, align text to start */
 @media (min-width: 992px) {
-  .topbar-layout1 .single-item {
+  /* .topbar-layout1 .single-item {
     justify-content: flex-start;
-  }
+  } */
 }
 
 .topbar-layout1 .item-icon {
@@ -9990,7 +9990,8 @@ ease;
         padding: 0px 2px;
     }
     .template-main-menu .nav-list li a{
-        font-size: 16px;
+       font-size: 15px;
+        font-weight: 500;
     }
 }
 /* Overlay */
@@ -10193,3 +10194,127 @@ ease;
     top: 57% !important;
 }
 
+/* ✅ RESTORE BOOTSTRAP CONTAINER EVERYWHERE */
+.container {
+  max-width: 1320px !important;
+  padding-left: 12px !important;
+  padding-right: 12px !important;
+  width: 100%;
+}
+/* ✅ LIMIT SWIPER ONLY TO EVENTS */
+.our-events-section .swiper {
+  width: 100%;
+  max-width: 100%;
+}
+
+
+.our-events-section .swiper-slide {
+  display: flex;
+  height: auto;
+}
+.our-team-search-wrapper {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 32px;
+}
+
+.our-team-search-box {
+  position: relative;
+  width: 100%;
+  max-width: 420px;
+}
+
+.our-team-search-input {
+  width: 100%;
+  padding: 10px 14px 10px 38px;
+  border: 1px solid #ddd;
+  border-radius: 30px;
+  font-size: 14px;
+  outline: none;
+}
+
+.our-team-search-input:focus {
+  border-color: #f16022;
+}
+
+.our-team-search-icon {
+  position: absolute;
+  top: 50%;
+  left: 14px;
+  transform: translateY(-50%);
+  color: #999;
+}
+/* ✅ FLIP CARD WRAPPER */
+.our-team-flip-card {
+  perspective: 1000px;
+}
+
+/* ✅ INNER ROTATION CONTAINER */
+.our-team-flip-inner {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  transition: transform 0.7s ease;
+  transform-style: preserve-3d;
+}
+
+/* ✅ HOVER FLIP */
+.our-team-flip-card:hover .our-team-flip-inner {
+  transform: rotateY(180deg);
+}
+
+/* ✅ FRONT + BACK COMMON */
+.our-team-flip-front,
+.our-team-flip-back {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  backface-visibility: hidden;
+  border-radius: 12px;
+  background: #fff;
+  box-shadow: 0 5px 16px rgba(0,0,0,0.08);
+  padding: 16px;
+}
+
+/* ✅ FRONT */
+.our-team-flip-front {
+  z-index: 2;
+}
+
+/* ✅ BACK */
+.our-team-flip-back {
+  transform: rotateY(180deg);
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  background: #f16022;
+  color: #fff;
+}
+
+.our-team-flip-back p {
+  margin-bottom: 8px;
+}
+
+.flip-note {
+  font-size: 13px;
+  opacity: 0.85;
+}
+.our-team-flip-card,
+.our-team-flip-front,
+.our-team-flip-back {
+  min-height: 360px;
+}
+/* ✅ Force white text on flip */
+.our-team-flip-back,
+.our-team-flip-back * {
+  color: #ffffff !important;
+}
+.our-team-flip-back {
+  background: #f16022;
+}
+
+.our-team-flip-back p,
+.our-team-flip-back h4 {
+  text-shadow: 0 1px 2px rgba(0,0,0,0.25);
+}

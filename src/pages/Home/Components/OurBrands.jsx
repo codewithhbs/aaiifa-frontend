@@ -26,9 +26,9 @@ const OurBrands = () => {
         <Row className="justify-content-center">
           <Col xs={12}>
             <div className="brands-header">
-            <p className="our-team-subtitle"> Partners</p>
+            {/* <p className="our-team-subtitle"> Partners</p> */}
               <h2 className="our-team-title">
-                Our Clients
+                Associate Partners
               </h2>
             </div>
           </Col>
@@ -70,14 +70,14 @@ const OurBrands = () => {
           </Col>
         </Row>
 
-        {/* Bottom Text */}
-        <Row className="justify-content-center">
+
+        {/* <Row className="justify-content-center">
           <Col xs={12} md={8}>
             <div className="brands-bottom-text">
               <p>within five years without</p>
             </div>
           </Col>
-        </Row>
+        </Row> */}
       </Container>
     </section>
   );

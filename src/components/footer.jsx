@@ -32,6 +32,10 @@ export default function Footer() {
                       <span className="contact-text "><a href="tel:09810410815" className="text-light">+919810410815</a></span>
                     </li>
                     <li>
+                      <i className="fas fa-phone mx-1"> </i>
+                      <span className="contact-text "><a href="tel:01142725051" className="text-light">+011-42725051</a></span>
+                    </li>
+                    <li>
                       <i className="fas fa-envelope mx-1"> </i>
                       <span className="contact-text text-light"><a href="mailto:aaiifa6@gmail.com" className="text-light">aaiifa6@gmail.com</a></span>
                     </li>
@@ -79,16 +83,16 @@ export default function Footer() {
                     <a href="/about-us">About Us</a>
                   </li>
                   <li>
-                    <a href="/our-partner">Become Sponsor</a>
+                    <a href="#">Become Sponsor</a>
                   </li>
                   <li>
                     <a href="#">For Advertise</a>
                   </li>
                   <li>
-                    <a href="/directory-sale">Upcoming Event Registration</a>
+                    <a href="#">Upcoming Event Registration</a>
                   </li>
                   <li>
-                    <a href="/directory-sale">Consultants</a>
+                    <a href="#">Consultants</a>
                   </li>
                   <li>
                     <a href="/terms-and-conditions">Terms & Conditions</a>
@@ -98,6 +102,12 @@ export default function Footer() {
                   </li>
                   <li>
                     <a href="/refund-policy">Refund Policy</a>
+                  </li>
+                  <li>
+                    <a href="#">AIIFA Memorabilia 2025</a>
+                  </li>
+                  <li>
+                    <a href="">Post Event Report 2025</a>
                   </li>
                 </ul>
               </div>

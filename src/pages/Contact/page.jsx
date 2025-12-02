@@ -63,7 +63,7 @@ const ContactSection = () => {
               <div className="contact-details">
                 <h3 className="contact-subtitle">Address</h3>
                 <p>
-                  504, Pearls Omaxe, Tower- I Netaji Subhash Place, Pitampurae
+                  504, Pearls Omaxe, Tower- I Netaji Subhash Place, Pitampura
                   New Delhi-110034
                 </p>
               </div>
@@ -120,13 +120,16 @@ const ContactSection = () => {
                 <a href="tel:+9188040085" className="phone-link">
                   +91 9810410815
                 </a>
+                <a href="tel:01142725051" className="phone-link">
+                  011-42725051
+                </a>
               </div>
             </div>
           </div>
 
           {/* Contact Form */}
           <div className="contact-form-container">
-            <h2 className="form-title">Send Us a Message</h2>
+            <h2 className="form-title">Send Your Views / Suggestions</h2>
             <p className="form-subtitle">
               We'll get back to you as soon as possible
             </p>

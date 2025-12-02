@@ -23,49 +23,51 @@ const teamMembers = [
     name: "Shri Yogesh Mandhani",
     title: "President",
     company: "Varad Ferro Alloys Pvt. Ltd.",
-    img: "http://hoverbusinessservices.com/cloud/aiifa/media/team/Ygesh-Mandhani-Ji-Image.jpg",
-  },
-  {
-    name: "Shri Gopal Gupta",
-    title: "President Emeritus",
-    company: "M/s Laxcon Steel Ltd",
-    img: "http://hoverbusinessservices.com/cloud/aiifa/media/team/Gopal-sir-photo-nc.jpg",
-  },
-  {
-    name: "Shri Devendra Kumar Agrawal",
-    title: "Immediate Past President",
-    company: "M/s Kashi Vishwanath Steels Ltd.",
-    img: "http://hoverbusinessservices.com/cloud/aiifa/media/team/g2.png",
-  },
-  {
-    name: "Shri Ashok Garg",
-    title: "Treasurer",
-    company: "M/s Reby Castings Pvt Ltd",
-    img: "http://hoverbusinessservices.com/cloud/aiifa/media/team/ashok-garg.png",
+    img: "media/team/Ygesh-Mandhani-Ji-Image.jpg",
   },
   {
     name: "Shri Kamal Aggarwal",
     title: "Hon. Secretary General",
     company: "M/s NIFS Steels",
-    img: "http://hoverbusinessservices.com/cloud/aiifa/media/team/NIFS-Steels-Kamal-Sir-photo.jpg",
+    img: "media/team/NIFS-Steels-Kamal-Sir-photo.jpg",
+  },
+  {
+    name: "Shri Gopal Gupta",
+    title: "President Emeritus",
+    company: "M/s Laxcon Steel Ltd",
+    img: "media/team/Gopal-sir-photo-nc.jpg",
   },
   {
     name: "Shri Jitendra Singh",
-    title: "Patron",
+    title: "Former President",
     company: "M/s ISC Machines Pvt Ltd",
-    img: "http://hoverbusinessservices.com/cloud/aiifa/media/team/jitendra.jpg",
+    img: "http://hoverbusinessservices.com/cloud/aiifa/media/members/shri-jitendra-singh.jpg",
   },
   {
+  name: "Shri K.K. Garg",
+  title: "Former President",
+  subtitle: "(Northern Zonal Chairman)",
+  company: "Sharu Steels Limited",
+  img: "http://hoverbusinessservices.com/cloud/aiifa/media/members/shri-k.%20k.-garg.jpg",
+},
+
+  {
     name: "Shri Sandeep Jain",
-    title: "Patron",
+    title: "Former President",
     company: "Trishala Alloys Pvt. Ltd.",
     img: "http://hoverbusinessservices.com/cloud/aiifa/media/team/sandeep.jpg",
   },
   {
-    name: "Shri Ashok Surana",
-    title: "Patron",
-    company: "M/s Shobha Enterprises",
-    img: "http://hoverbusinessservices.com/cloud/aiifa/media/team/surana.jpg",
+    name: "Shri Devendra Kumar Agrawal",
+    title: "Former President",
+    company: "M/s Kashi Vishwanath Steels Ltd.",
+    img: "media/team/g2.png",
+  },
+  {
+    name: "Shri Ashok Garg",
+    title: "Treasurer",
+    company: "M/s Reby Castings Pvt Ltd",
+    img: "media/team/ashok-garg.png",
   },
 ];
 
@@ -76,8 +78,8 @@ export default function OurTeamSection() {
       <div className="our-team-container">
         {/* The subtitle and title should be semantic, possibly in a header element */}
         <header className="our-team-header">
-          <p className="our-team-subtitle">NATIONAL MEMBER</p>
-          <h2 className="our-team-title text-light">Meet Our Team</h2>
+          {/* <p className="our-team-subtitle">NATIONAL MEMBER</p> */}
+          <h2 className="our-team-title text-light">Our National Council Members</h2>
         </header>
 
         <div className="our-team-grid">

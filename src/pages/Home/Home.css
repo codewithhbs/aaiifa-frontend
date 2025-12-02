@@ -812,6 +812,7 @@ text-align: start;
     color: #555;
     line-height: 1.7;
     margin-bottom: 20px;
+    text-align: justify;
 }
 
 /* Updated button styling for consistency with previous "Read More" */
@@ -1871,4 +1872,44 @@ text-align: start;
 .three-cards-section > * {
   position: relative; 
   z-index: 2;
+}
+ .header-btn .btn-primary{
+  /* background-color: #ff5e14; */
+  background-color: #ff5e14;
+  color: #ffffff;
+  padding: 12px 25px;
+  border-radius: 5px;
+  font-weight: 700;
+  font-size: 15px;
+  text-decoration: none;
+  transition: background-color 0.3s ease;
+  white-space: nowrap;
+  border: none;
+ }
+
+ .header-btn .btn-primary:hover{
+  background-color: #ff5e14;
+  color: #ffffff;
+  padding: 12px 25px;
+  border-radius: 5px;
+  font-weight: 700;
+  font-size: 15px;
+  text-decoration: none;
+  transition: background-color 0.3s ease;
+  white-space: nowrap;
+  border: none;
+ }
+ .our-team-subtitle-br {
+  font-size: 12px;
+  color: #FF5E14;
+  margin-bottom: 10px;
+  text-transform:inherit;
+}
+.our-events-section .our-events-swiper {
+  width: 100%;
+}
+
+.our-events-section .swiper-slide {
+  display: flex;
+  height: auto;
 }

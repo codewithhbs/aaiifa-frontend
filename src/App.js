@@ -10,7 +10,7 @@ import NationalMember from './pages/OurTeam/NationalMember.jsx';
 import ActiveMembers from './pages/OurTeam/ActiveMember.jsx';
 import PastEvents from './pages/PastEvents/PastEvents.jsx';
 import PastVideos from './pages/PastEvents/PastVideos.jsx';
-import DirectorySale from './pages/DirectorySale/page.jsx';
+import SteelHandbook from './pages/SteelHandbook/page.jsx';
 import ContactSection from './pages/Contact/page.jsx';
 import Newsletter2016 from './pages/Newsletters/Newsletter2016.jsx';
 import Newsletter2017 from './pages/Newsletters/Newsletter2017.jsx';
@@ -54,7 +54,7 @@ function AppContent() {
         <Route path="active-member" element={<ActiveMembers />} />
         <Route path="past-events" element={<PastEvents />} />
         <Route path="past-videos" element={<PastVideos />} />
-        <Route path="directory-sale" element={<DirectorySale />} />
+        <Route path="steel-handbook" element={<SteelHandbook />} />
         <Route path="contact" element={<ContactSection />} />
         <Route path="newsletter-2016" element={<Newsletter2016 />} />
         <Route path="newsletter-2017" element={<Newsletter2017 />} />
