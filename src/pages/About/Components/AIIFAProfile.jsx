@@ -42,9 +42,9 @@ export default function AboutUsSection() {
 
           {/* ===== RIGHT: CONTENT COLUMN ===== */}
           <div className="about-us-content-column">
-            <p className="our-team-subtitle">ABOUT US</p>
+            <p className="our-team-subtitle">ABOUT Industry</p>
 
-            <h2 className="our-team-title">Know About Our Organization</h2>
+            <h2 className="our-team-title">About The Industry</h2>
 
             <h5>Dual-Route Structure of Steel Production in India</h5>
             <p className="about-us-description">

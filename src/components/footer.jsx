@@ -80,7 +80,7 @@ export default function Footer() {
                 <h3 className="footer-widget-heading">USEFUL LINKS</h3>
                 <ul className="footer-menu-layout1">
                   <li>
-                    <a href="/about-us">About Us</a>
+                    <a href="/about-industry">About Us</a>
                   </li>
                   <li>
                     <a href="#">Become Sponsor</a>

@@ -47,7 +47,7 @@ function AppContent() {
       <ThankYouPopup /> 
       <Routes>
         <Route path="/" element={<Home />} />
-        <Route path="about-us" element={<AboutUs />} />
+        <Route path="about-industry" element={<AboutUs />} />
         <Route path="governing-bodies" element={<GoverningBodies />} />
         <Route path="life-members" element={<LifeMembers />} />
         <Route path="national-member" element={<NationalMember />} />

@@ -11,10 +11,10 @@ export default function InnerBannerSection() {
       >
         <div className="container">
           <div className="inner-banner-content-box">
-            <div className="item-content">
-              {/* Note: I'm keeping the subtitle commented out as in the original */}
+            {/* <div className="item-content">
+             
               <h2 className="item-title">Custom Steel Pipe For Your Next Project</h2>
-            </div>
+            </div> */}
             <div className="banner-btn-wrapper">
               <a href="/contact" className="inner-banner-btn">
                 Reach Us
