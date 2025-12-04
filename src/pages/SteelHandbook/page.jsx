@@ -1,6 +1,6 @@
 import React from "react";
 import './director.css'
-import ImgDirectory from './directory-sale.jpg'
+import ImgDirectory from './handbook.jpg'
 
 const  SteelHandbook = () => {
   return (
@@ -8,7 +8,7 @@ const  SteelHandbook = () => {
       <div className="directory-query-container">
         {/* Left: Query Form */}
         <div className="directory-form">
-          <h2 className="query-title">Steel Handbook</h2>
+          <h2 className="query-title">Book Your Copy</h2>
 
           <form className="query-form">
             <div className="form-row">

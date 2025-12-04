@@ -66,7 +66,7 @@ const teamMembers = [
   {
     name: "Shri Ashok Garg",
     title: "Treasurer",
-    company: "M/s Reby Castings Pvt Ltd",
+    company: "Petro Pol India Ltd Bhiwadi, Rajasthan",
     img: "media/team/ashok-garg.png",
   },
 ];

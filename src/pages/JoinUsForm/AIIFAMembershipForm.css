@@ -207,3 +207,62 @@
     margin-bottom: 10px;
   }
 }
+/* ✅ Space after every input field */
+.input-group input {
+  margin-bottom: 10px;
+}
+
+/* ✅ Space after full-width inputs */
+.input-group.full-width input {
+  margin-bottom: 14px;
+}
+
+/* ✅ Space between grid rows (address, furnace, etc.) */
+.address-grid,
+.representative-grid,
+.furnace-details-grid,
+.raw-materials-grid {
+  row-gap: 18px;   /* increased vertical gap */
+}
+
+/* ✅ Space between checkbox rows */
+.checkbox-group {
+  margin-bottom: 15px;
+}
+
+.checkbox-item {
+  margin-bottom: 8px;
+}
+
+/* ✅ Space after section labels */
+.section-label {
+  margin-bottom: 12px;
+}
+
+/* ✅ Space between sections inside one block */
+.section-content > input,
+.section-content > .checkbox-group,
+.section-content > .address-grid,
+.section-content > .representative-grid,
+.section-content > .raw-materials-grid {
+  margin-bottom: 16px;
+}
+
+/* ✅ More spacing for signature box */
+.signature-box {
+  margin-top: 20px;
+  margin-bottom: 20px;
+  height: 80px;
+  border: 1px dashed #777;
+}
+
+/* ✅ Space before submit button */
+.form-actions {
+  margin-top: 40px;
+}
+.date-input {
+  padding: 6px 8px;
+  border: 1px solid #ccc;
+  border-radius: 3px;
+  font-size: 13px;
+}

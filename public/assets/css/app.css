@@ -1798,7 +1798,7 @@ header {
 }
 
 .temp-logo .logo-img {
-  height: auto;
+  height: 100%;
   display: block;
 }
 

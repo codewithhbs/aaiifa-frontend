@@ -44,50 +44,87 @@ export default function AboutUsSection() {
           <div className="about-us-content-column">
             <p className="our-team-subtitle">ABOUT US</p>
 
-            <h2 className="our-team-title">
-              Know About Our Organization
-            </h2>
+            <h2 className="our-team-title">Know About Our Organization</h2>
 
+            <h5>Dual-Route Structure of Steel Production in India</h5>
             <p className="about-us-description">
-              <strong>AIIFA Sustainable Steel Manufacturers Association</strong>{" "}
-              is a premier industry body driving sustainable growth across
-              India’s steel manufacturing sector. Representing over 1,800
-              members—including induction furnace units, rolling mills, casting
-              units, fabricators, and manufacturers—AIIFA advocates for
-              environmentally responsible and economically viable practices
-              aligned with national development goals and global competitiveness.
+              India’s steel industry operates through a dual-route system comprising the{" "}
+              <strong>Blast Furnace–Basic Oxygen Furnace (BF–BOF) route</strong> and the{" "}
+              <strong>electrical steelmaking route</strong>. The BF–BOF route, characterized by
+              high capital investment and large-scale operations, is predominantly used by
+              integrated steel plants. In contrast, the electrical route has evolved as a more
+              flexible, energy-efficient, and widely adopted option for medium and small-scale
+              enterprises. This route includes <strong>Direct Reduced Iron (DRI)</strong>, which
+              serves as a cost-effective alternative to traditional ironmaking;{" "}
+              <strong>Electric Arc Furnaces (EAFs)</strong>, known for their adaptability in using
+              scrap and DRI; <strong>Electric Induction Furnaces (EIFs)</strong>, which support
+              decentralized and small-scale steelmaking; and{" "}
+              <strong>Steel Re-rolling Mills (SRRMs)</strong>, which recycle and convert
+              semi-finished products into finished steel. Collectively, these segments
+              strengthen the resilience of India’s steel ecosystem, enhance resource
+              efficiency, and play a pivotal role in meeting the country’s rapidly growing
+              infrastructure-driven demand.
             </p>
 
-            <p className="about-us-description">
-              Headquartered in New Delhi with twelve regional chapters across
-              major industrial zones, AIIFA serves as a key interface between
-              industry stakeholders and government bodies. It actively engages
-              in policy advocacy, facilitates implementation of government
-              schemes, and collaborates on R&amp;D initiatives with relevant
-              ministries and institutions.
-            </p>
-
+          
           </div>
         </div>
 
         {/* ================= FULL-WIDTH EXTENDED CONTENT ================= */}
         <div className="about-us-extended-content pt-4">
+          <h5>Role and Importance of the Secondary Steel Sector</h5>
+            <p className="about-us-description">
+              The <strong>Secondary Steel Sector</strong> is a critical pillar of India’s steel
+              industry, contributing nearly <strong>half of the nation’s steel production
+              capacity</strong> and supporting a vast network of small and medium enterprises.
+              Dominated by EAFs and Induction Furnaces, the sector relies heavily on steel scrap
+              and DRI, aligning naturally with circular economy principles and low-carbon
+              growth pathways. Its decentralized presence ensures widespread availability of
+              steel, generates substantial employment across industrial clusters, and delivers
+              cost-effective inputs to key sectors such as construction, infrastructure,
+              automotive, engineering, and manufacturing. By complementing integrated steel
+              producers, the secondary sector fosters balanced industrial development and
+              strengthens India’s overall steel supply chain.
+            </p>
+            
+          <h5>Market Size, Capacity, and Strategic Significance</h5>
           <p className="about-us-description">
-            The association plays a critical role in promoting advanced
-            steel-making and processing technologies, enabling its members to
-            enhance product quality, reduce greenhouse gas emissions, and expand
-            their global footprint. Through its flagship national conferences
-            – cum – exhibition and annual industry meets, AIIFA fosters
-            strategic dialogue, shares best practices, and strengthens
-            alignment with the government’s target of achieving 300 million
-            tonnes of steel capacity by 2030.
+            With an installed steelmaking capacity exceeding{" "}
+            <strong>150 MTPA</strong>, India is the{" "}
+            <strong>second-largest steel producer globally</strong>. The secondary steel
+            segment alone contributes <strong>55–60%</strong> of this capacity, producing a
+            diverse range of long and flat products. Its extensive geographic spread enables
+            efficient service to region-specific industrial needs and supports the
+            Government’s infrastructure-led economic expansion. Despite its enormous
+            contribution, the sector continues to face challenges in energy efficiency,
+            technology modernization, and emissions reduction—particularly due to dependence
+            on coal-based DRI and uneven adoption of advanced processes.
           </p>
 
+          <h5>Pathway to Sustainability and Net Zero 2070</h5>
           <p className="about-us-description">
-            By translating policy engagement into actionable outcomes, AIIFA
-            continues to champion innovation, efficiency, and sustainability—
-            reinforcing its leadership in shaping a future-ready,
-            low-carbon, and resilient steel sector for India.
+            The secondary steel sector will play a transformative and indispensable role in
+            India’s journey toward achieving <strong>Net Zero emissions by 2070</strong>. With
+            its strong reliance on scrap-based steelmaking, the sector already enjoys a lower
+            carbon footprint compared to traditional routes. Future decarbonization can be
+            accelerated through:
+          </p>
+
+          <ul className="about-us-description">
+            <li>Transitioning to renewable energy-powered electric furnaces</li>
+            <li>Improving energy efficiency and adopting advanced process optimization</li>
+            <li>Strengthening scrap collection, segregation, and recycling ecosystems</li>
+            <li>
+              Exploring green hydrogen-based DRI, carbon capture solutions, and other emerging
+              clean technologies
+            </li>
+          </ul>
+
+          <p className="about-us-description">
+            By embracing modernization and sustainable practices, the Secondary Steel Sector
+            is positioned to become a cornerstone of India’s green industrial transition—
+            supporting national climate goals while driving resilient and inclusive economic
+            growth.
           </p>
         </div>
       </div>

@@ -45,6 +45,18 @@ const newsletterData = [
     imageUrl: 'http://hoverbusinessservices.com/cloud/aiifa/media/newsletters/2025/7.jpg',
     linkUrl: 'https://hoverbusinessservices.com/cloud/aiifa/newsletters/2025/Newsletter-July-2025.pdf',
   },
+  {
+    id: 'aug',
+    title: 'Aug-Oct Newsletter 2025', 
+    imageUrl: 'http://hoverbusinessservices.com/cloud/aiifa/media/newsletters/2025/8.jpg',
+    linkUrl: 'https://hoverbusinessservices.com/cloud/aiifa/newsletters/2025/Newsletter-Aug-to-Oct-2025.pdf',
+  },
+  {
+    id: 'nov',
+    title: 'Nov Newsletter 2025', 
+    imageUrl: 'http://hoverbusinessservices.com/cloud/aiifa/media/newsletters/2025/9.jpg',
+    linkUrl: 'https://hoverbusinessservices.com/cloud/aiifa/newsletters/2025/Newsletter-Nov-2025.pdf',
+  },
 ];
 
 const Newsletter2025 = () => {

@@ -138,14 +138,14 @@ export default function Header() {
         <Container fluid>
           <Row className="header-height align-items-center justify-content-between px-3">
 
-            <Col xs="8" lg="3">
+            <Col xs="8" lg="4">
               <a href="/" className="temp-logo d-inline-block">
                 <img src="media/logo.png" alt="Logo" className="logo-img" />
               </a>
             </Col>
 
             {/* Desktop Menu */}
-            <Col lg="7" className="d-none d-lg-block text-center">
+            <Col lg="6" className="d-none d-lg-block text-center">
               <nav className="template-main-menu">
                 <ul className="nav-list">
                   {navLinks.map((link) =>
