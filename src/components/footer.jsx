@@ -104,10 +104,10 @@ export default function Footer() {
                     <a href="/refund-policy">Refund Policy</a>
                   </li>
                   <li>
-                    <a href="#">AIIFA Memorabilia 2025</a>
+                    <a href="https://hoverbusinessservices.com/cloud/aiifa/AIIFA-Memorabilia-2025.pdf">AIIFA Memorabilia 2025</a>
                   </li>
                   <li>
-                    <a href="">Post Event Report 2025</a>
+                    <a href="https://hoverbusinessservices.com/cloud/aiifa/Post-Event-Report-2025.pdf">Post Event Report 2025</a>
                   </li>
                 </ul>
               </div>

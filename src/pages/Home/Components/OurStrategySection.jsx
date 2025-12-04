@@ -21,7 +21,7 @@ const FourCardsSection = () => {
       icon: <FaUsers />,
       title: 'WHO WE ARE',
       description:
-        'We are a leading industry association representing India’s secondary steel sector, uniting over 1,800 manufacturers to advance sustainable, innovative, and globally competitive steel production.',
+        'We are a leading industry association representing India’s secondary steel sector,uniting over 1,800 manufacturers to advance sustainable, innovative, and globally competitive steel production.',
       color: '#FF5E14'
     },
     {
@@ -29,7 +29,7 @@ const FourCardsSection = () => {
       icon: <FaEye />,
       title: 'VISION',
       description:
-        'AIIFA Sustainable Steel Manufacturers Association aims to drive the transformation of India’s secondary steel sector through green technologies, circular economy practices, and strong industry collaboration.',
+        'AIIFA Sustainable Steel Manufacturers Association aims to drive the transformation of India’s secondary steel sector through green technologies, circular economy practices, and strong industry collaboration',
       color: '#22C55E'
     },
     {
@@ -37,7 +37,7 @@ const FourCardsSection = () => {
       icon: <FaRocket />,
       title: 'MISSION',
       description:
-        'AIIFA’s mission is to advance India’s steel industry through clean technologies, energy efficiency, and circular economy practices that reduce emissions and enhance sustainability while fostering collaboration and strong governance.',
+        'AIIFA’s mission is to advance India’s steel industry through clean technologies, energy efficiency, and circular economy practices that reduce emissions and enhance sustainability. By fostering collaboration, capacity-building, and transparent governance, AIIFA empowers manufacturers to produce globally ompetitive, environmentally responsible steel.',
       color: '#2563EB'
     },
     {
@@ -45,7 +45,7 @@ const FourCardsSection = () => {
       icon: <FaGem />,
       title: 'CORE VALUES',
       description:
-        'AIIFA’s core values centre on sustainability, innovation, integrity, and transparency—promoting low-carbon practices, responsible resource use, ethical governance, and continuous improvement.',
+        'AIIFA’s core values centre on sustainability, innovation, integrity, and transparency—promoting low-carbon practices, responsible resource use, and ethical governance. Through collaboration and continuous improvement, the Association empowers steel manufacturers to stay globally competitive while driving a greener, more resilient future.',
       color: '#9333EA'
     }
   ];
