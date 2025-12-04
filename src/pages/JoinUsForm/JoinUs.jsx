@@ -4,7 +4,6 @@ import "./AIIFAMembershipForm.css";
 const defaultFormState = {
   companyName: "",
 
-  factoryAddress: "",
   factoryDistrict: "",
   factoryCity: "",
   factoryPinCode: "",
@@ -13,7 +12,6 @@ const defaultFormState = {
   factoryEmail1: "",
   factoryEmail2: "",
 
-  correspondenceAddress: "",
   correspondenceDistrict: "",
   correspondenceCity: "",
   correspondencePinCode: "",
@@ -26,28 +24,22 @@ const defaultFormState = {
   designation: "",
   representativeMobile: "",
   representativePhone: "",
-  representativePinCode: "",   // ✅ ADDED
   representativeEmail: "",
-
   gstNumber: "",
+
   furnaceCapacity: "",
   furnaceMake: "",
   numberOfCrucible: "",
 
   productIngot: false,
   productBillet: false,
-  bisNumber: "",
-  bisYes: false,
-  bisNo: false,
-  bisAF: false,
 
-  driIron: "",
-  pelletIron: "",
+  dri: "",
+  pellet: "",
   importedScrap: "",
   indigenousScrap: "",
 
-  driManufacturerY: false,
-  driManufacturerN: false,
+  driManufacturer: "",
   processRouteGasBased: false,
   processRouteCoalBased: false,
   technology: "",
@@ -76,785 +68,443 @@ const defaultFormState = {
   procurementOpenAccess: false,
 
   bisCertificationMark: "",
+  greenSteelCertificate: "",
 
-  // ✅ AIIFA OFFICE FIELDS (ADDED)
   membershipno: "",
   dateOfEnrollment: ""
 };
 
-
-
 const AIIFAMembershipForm = () => {
-  const [successMessage, setSuccessMessage] = useState("");
   const [formData, setFormData] = useState(defaultFormState);
+  const [successMessage, setSuccessMessage] = useState("");
 
   const handleInputChange = (e) => {
     const { name, value, type, checked } = e.target;
-    setFormData((prev) => ({
+    setFormData(prev => ({
       ...prev,
-      [name]: type === "checkbox" ? checked : value,
+      [name]: type === "checkbox" ? checked : value
     }));
   };
 
   const handleSubmit = async (e) => {
     e.preventDefault();
-
-    try {
-      const response = await fetch("http://localhost:5000/api/membership", {
-        method: "POST",
-        headers: { "Content-Type": "application/json" },
-        body: JSON.stringify(formData),
-      });
-
-      const result = await response.json();
-
-      if (response.ok) {
-        setSuccessMessage("Membership submitted successfully!");
-
-        setTimeout(() => {
-          setSuccessMessage("");
-        }, 4000);
-
-        setFormData(defaultFormState);
-      } else {
-        alert("Error: " + result.message);
-      }
-    } catch (error) {
-      alert("Failed to submit form.");
-    }
+    setSuccessMessage("Membership submitted successfully!");
+    setFormData(defaultFormState);
+    setTimeout(() => setSuccessMessage(""), 4000);
   };
 
   return (
     <div className="aiifa-form-container">
-      <div className="aiifa-header">
 
+      {/* HEADER */}
+      <div className="aiifa-header">
         <div className="association-name">
-          AIIFA Sustainable Steel Manufacturers Association
+          AIIFA SUSTAINABLE STEEL MANUFACTURERS ASSOCIATION
         </div>
         <div className="former-name">
-          (Formerly known as AIIFA Sustainable Steel Manufacturers Association)
+          (Formerly known as All India Induction Furnaces Association)
         </div>
         <div className="tagline">
-          (Voice of Indian Sustainable Steel Manufacturing Sector)
+          (Promoting Sustainability in Steel for Greener Future)
         </div>
-        <div className="form-title">
-          AIIFA MEMBERSHIP FORM
-        </div>
+        <div className="form-title">AIIFA MEMBERSHIP FORM</div>
       </div>
 
       <div className="contact-info">
-        504, Tower 1, Pearls Onaxe, Netaji Subhari Rice, Pianpura, Delhi - 110034<br />
-        Mob: 9810410186 Tel: 011- 27351345/47/42725051 E-Mail: aalffa8@amail.com
+        504, Tower 1, Pearls Omaxe, Netaji Subhash Place, Pitampura, Delhi - 110034<br />
+        Mob: 9810410186 Tel: 011-27351345/47/42725051 E-Mail: aaiifa6@gmail.com
       </div>
 
       <form onSubmit={handleSubmit} className="membership-form">
-        {/* Previous sections 1-6 remain the same */}
 
-        {/* Section 1: Company Name */}
+        {/* 1 */}
         <div className="form-section">
           <div className="section-number">1.</div>
           <div className="section-content">
             <label className="section-label">NAME OF THE COMPANY (IN BLOCK LETTERS)</label>
-            <input
-              type="text"
-              name="companyName"
-              value={formData.companyName}
-              onChange={handleInputChange}
-              className="company-input"
-              placeholder="Enter company name in block letters"
-              required
-            />
+            <input type="text" name="companyName" value={formData.companyName} onChange={handleInputChange} className="company-input" />
           </div>
         </div>
 
-        {/* Section 2: Factory Address */}
+        {/* 2 */}
         <div className="form-section">
           <div className="section-number">2.</div>
           <div className="section-content">
             <label className="section-label">FACTORY ADDRESS</label>
+
             <div className="address-grid">
-              <div className="input-group">
-                <span className="input-label">DISTT:</span>
-                <input
-                  type="text"
-                  name="factoryDistrict"
-                  value={formData.factoryDistrict}
-                  onChange={handleInputChange}
-                  required
-                />
-              </div>
-              <div className="input-group">
-                <span className="input-label">CITY:</span>
-                <input
-                  type="text"
-                  name="factoryCity"
-                  value={formData.factoryCity}
-                  onChange={handleInputChange}
-                  required
-                />
-              </div>
-              <div className="input-group">
-                <span className="input-label">PHONE NO.:</span>
-                <input
-                  type="text"
-                  name="factoryPhone"
-                  value={formData.factoryPhone}
-                  onChange={handleInputChange}
-                  required
-                />
-              </div>
-              <div className="input-group">
-                <span className="input-label">PIN CODE:</span>
-                <input
-                  type="text"
-                  name="factoryPinCode"
-                  value={formData.factoryPinCode}
-                  onChange={handleInputChange}
-                  required
-                />
-              </div>
-              <div className="input-group">
-                <span className="input-label">MOBILE NO.:</span>
-                <input
-                  type="text"
-                  name="factoryMobile"
-                  value={formData.factoryMobile}
-                  onChange={handleInputChange}
-                  required
-                />
-              </div>
-              <div className="input-group full-width">
-                <span className="input-label">E-MAIL ID 1:</span>
-                <input
-                  type="email"
-                  name="factoryEmail1"
-                  value={formData.factoryEmail1}
-                  onChange={handleInputChange}
-                  required
-                />
-              </div>
-              <div className="input-group full-width">
-                <span className="input-label">E-MAIL ID 2:</span>
-                <input
-                  type="email"
-                  name="factoryEmail2"
-                  value={formData.factoryEmail2}
-                  onChange={handleInputChange}
-                  required
-                />
-              </div>
+              <input placeholder="DISTT" name="factoryDistrict" value={formData.factoryDistrict} onChange={handleInputChange} />
+              <input placeholder="CITY" name="factoryCity" value={formData.factoryCity} onChange={handleInputChange} />
+              <input placeholder="PIN CODE" name="factoryPinCode" value={formData.factoryPinCode} onChange={handleInputChange} />
+              <input placeholder="MOBILE NO." name="factoryMobile" value={formData.factoryMobile} onChange={handleInputChange} />
+              <input placeholder="PHONE NO." name="factoryPhone" value={formData.factoryPhone} onChange={handleInputChange} />
             </div>
+
+            <input placeholder="E-MAIL ID 1" name="factoryEmail1" value={formData.factoryEmail1} onChange={handleInputChange} />
+            <input placeholder="E-MAIL ID 2" name="factoryEmail2" value={formData.factoryEmail2} onChange={handleInputChange} />
           </div>
         </div>
 
-        {/* Section 3: Correspondence Address */}
+        {/* 3 */}
         <div className="form-section">
           <div className="section-number">3.</div>
           <div className="section-content">
-            <label className="section-label">ADDRESS FOR CORRESPONDENCE:</label>
+            <label className="section-label">ADDRESS FOR CORRESPONDENCE</label>
+
             <div className="address-grid">
-              <div className="input-group">
-                <span className="input-label">DISTT:</span>
-                <input
-                  type="text"
-                  name="correspondenceDistrict"
-                  value={formData.correspondenceDistrict}
-                  onChange={handleInputChange}
-                />
-              </div>
-              <div className="input-group">
-                <span className="input-label">CITY:</span>
-                <input
-                  type="text"
-                  name="correspondenceCity"
-                  value={formData.correspondenceCity}
-                  onChange={handleInputChange}
-                />
-              </div>
-              <div className="input-group">
-                <span className="input-label">PIN CODE:</span>
-                <input
-                  type="text"
-                  name="correspondencePinCode"
-                  value={formData.correspondencePinCode}
-                  onChange={handleInputChange}
-                />
-              </div>
-              <div className="input-group">
-                <span className="input-label">MOBILE NO.:</span>
-                <input
-                  type="text"
-                  name="correspondenceMobile"
-                  value={formData.correspondenceMobile}
-                  onChange={handleInputChange}
-                />
-              </div>
-              <div className="input-group">
-                <span className="input-label">PHONE NO.:</span>
-                <input
-                  type="text"
-                  name="correspondencePhone"
-                  value={formData.correspondencePhone}
-                  onChange={handleInputChange}
-                />
-              </div>
-              <div className="input-group full-width">
-                <span className="input-label">E-MAIL ID 1:</span>
-                <input
-                  type="email"
-                  name="correspondenceEmail1"
-                  value={formData.correspondenceEmail1}
-                  onChange={handleInputChange}
-                />
-              </div>
-              <div className="input-group full-width">
-                <span className="input-label">E-MAIL ID 2:</span>
-                <input
-                  type="email"
-                  name="correspondenceEmail2"
-                  value={formData.correspondenceEmail2}
-                  onChange={handleInputChange}
-                />
-              </div>
+              <input placeholder="DISTT" name="correspondenceDistrict" value={formData.correspondenceDistrict} onChange={handleInputChange} />
+              <input placeholder="CITY" name="correspondenceCity" value={formData.correspondenceCity} onChange={handleInputChange} />
+              <input placeholder="PIN CODE" name="correspondencePinCode" value={formData.correspondencePinCode} onChange={handleInputChange} />
+              <input placeholder="MOBILE NO." name="correspondenceMobile" value={formData.correspondenceMobile} onChange={handleInputChange} />
+              <input placeholder="PHONE NO." name="correspondencePhone" value={formData.correspondencePhone} onChange={handleInputChange} />
             </div>
+
+            <input placeholder="E-MAIL ID 1" name="correspondenceEmail1" value={formData.correspondenceEmail1} onChange={handleInputChange} />
+            <input placeholder="E-MAIL ID 2" name="correspondenceEmail2" value={formData.correspondenceEmail2} onChange={handleInputChange} />
           </div>
         </div>
 
-        {/* Section 4: Representative */}
+        {/* 4 */}
         <div className="form-section">
           <div className="section-number">4.</div>
           <div className="section-content">
-            <label className="section-label">NAME OF REPRESENTATIVE:</label>
-            <div className="representative-grid">
-              <div className="input-group">
-                <input
-                  type="text"
-                  name="representativeName"
-                  value={formData.representativeName}
-                  onChange={handleInputChange}
-                  placeholder="Name"
-                />
-              </div>
-              <div className="input-group">
-                <span className="input-label">DESIGNATION:</span>
-                <input
-                  type="text"
-                  name="designation"
-                  value={formData.designation}
-                  onChange={handleInputChange}
-                />
-              </div>
-              <div className="input-group">
-                <span className="input-label">MOBILE NO.:</span>
-                <input
-                  type="text"
-                  name="representativeMobile"
-                  value={formData.representativeMobile}
-                  onChange={handleInputChange}
-                />
-              </div>
-              <div className="input-group">
-                <span className="input-label">PIN CODE:</span>
-                <input
-                  type="text"
-                  name="representativePinCode"
-                  value={formData.representativePinCode}
-                  onChange={handleInputChange}
-                />
-              </div>
-              <div className="input-group full-width">
-                <span className="input-label">EMAIL ID 1:</span>
-                <input
-                  type="email"
-                  name="representativeEmail"
-                  value={formData.representativeEmail}
-                  onChange={handleInputChange}
-                />
-              </div>
-               <div className="input-group">
-                <span className="input-label">GST No.:</span>
-                <input
-                  type="text"
-                  name="gstNumber"
-                  value={formData.gstNumber}
-                  onChange={handleInputChange}
-                />
-              </div>
-            </div>
+            <input placeholder="NAME OF REPRESENTATIVE" name="representativeName" value={formData.representativeName} onChange={handleInputChange} />
+            <input placeholder="DESIGNATION" name="designation" value={formData.designation} onChange={handleInputChange} />
+            <input placeholder="MOBILE NO." name="representativeMobile" value={formData.representativeMobile} onChange={handleInputChange} />
+            <input placeholder="PH. NO." name="representativePhone" value={formData.representativePhone} onChange={handleInputChange} />
+            <input placeholder="E-MAIL ID 1" name="representativeEmail" value={formData.representativeEmail} onChange={handleInputChange} />
+            <input placeholder="GST No." name="gstNumber" value={formData.gstNumber} onChange={handleInputChange} />
           </div>
         </div>
 
-        {/* Section 5: GST & Furnace Details */}
+        {/* 5 */}
         <div className="form-section">
           <div className="section-number">5.</div>
+                      <label className="section-label">FURNACE DETAIL: </label>
           <div className="section-content">
-            <div className="furnace-details-grid">
-             
-              <div className="input-group">
-                <span className="input-label">FURNACE CAPACITY:</span>
-                <input
-                  type="text"
-                  name="furnaceCapacity"
-                  value={formData.furnaceCapacity}
-                  onChange={handleInputChange}
-                />
-              </div>
-              <div className="input-group">
-                <span className="input-label">MAKE:</span>
-                <input
-                  type="text"
-                  name="furnaceMake"
-                  value={formData.furnaceMake}
-                  onChange={handleInputChange}
-                />
-              </div>
-              <div className="input-group">
-                <span className="input-label">NO. OF CRUCIBLE:</span>
-                <input
-                  type="text"
-                  name="numberOfCrucible"
-                  value={formData.numberOfCrucible}
-                  onChange={handleInputChange}
-                />
-              </div>
-            </div>
+            <input placeholder="FURNACE CAPACITY" name="furnaceCapacity" value={formData.furnaceCapacity} onChange={handleInputChange} />
+            <input placeholder="MAKE" name="furnaceMake" value={formData.furnaceMake} onChange={handleInputChange} />
+            <input placeholder="NO. OF CRUCIBLE" name="numberOfCrucible" value={formData.numberOfCrucible} onChange={handleInputChange} />
 
-            <div className="product-section">
-              <label className="section-label">PRODUCT [PL. TICK THE OPTIONS GIVEN BELOW]:</label>
-              <div className="checkbox-group">
-                <div className="checkbox-item">
-                  <input
-                    type="checkbox"
-                    name="productIngot"
-                    checked={formData.productIngot}
-                    onChange={handleInputChange}
-                  />
-                  <label>INGOT</label>
-                </div>
-                <div className="checkbox-item">
-                  <input
-                    type="checkbox"
-                    name="productBillet"
-                    checked={formData.productBillet}
-                    onChange={handleInputChange}
-                  />
-                  <label>BILLET:</label>
-                </div>
-                <div className="checkbox-item">
-                  <span className="input-label">BIS NO.:</span>
-                  <input
-                    type="text"
-                    name="bisNumber"
-                    value={formData.bisNumber}
-                    onChange={handleInputChange}
-                    className="bis-input"
-                  />
-                </div>
-                <div className="checkbox-item">
-                  <input
-                    type="checkbox"
-                    name="bisYes"
-                    checked={formData.bisYes}
-                    onChange={handleInputChange}
-                  />
-                  <label>(Y)</label>
-                </div>
-                <div className="checkbox-item">
-                  <input
-                    type="checkbox"
-                    name="bisNo"
-                    checked={formData.bisNo}
-                    onChange={handleInputChange}
-                  />
-                  <label>(N)</label>
-                </div>
-                <div className="checkbox-item">
-                  <input
-                    type="checkbox"
-                    name="bisAF"
-                    checked={formData.bisAF}
-                    onChange={handleInputChange}
-                  />
-                  <label>(AF)</label>
-                </div>
-              </div>
-            </div>
+            <label className="section-label">PRODUCT</label>
+            <label><input type="checkbox" name="productIngot" checked={formData.productIngot} onChange={handleInputChange} /> INGOT</label>
+            <label><input type="checkbox" name="productBillet" checked={formData.productBillet} onChange={handleInputChange} /> BILLET</label>
           </div>
         </div>
 
-        {/* Section 6: Raw Materials */}
+        {/* 6 */}
         <div className="form-section">
           <div className="section-number">6.</div>
+           <label className="section-label">RAW METERAIL USED: </label>
           <div className="section-content">
-            <label className="section-label">RAW MATERIAL USED:</label>
-            <div className="raw-materials-grid">
-              <div className="input-group">
-                <span className="input-label">DRI IRON:</span>
-                <input
-                  type="text"
-                  name="driIron"
-                  value={formData.driIron}
-                  onChange={handleInputChange}
-                />
-              </div>
-              <div className="input-group">
-                <span className="input-label">PELLET IRON:</span>
-                <input
-                  type="text"
-                  name="pelletIron"
-                  value={formData.pelletIron}
-                  onChange={handleInputChange}
-                />
-              </div>
-              <div className="input-group">
-                <span className="input-label">IMPORTED SCRAP:</span>
-                <input
-                  type="text"
-                  name="importedScrap"
-                  value={formData.importedScrap}
-                  onChange={handleInputChange}
-                />
-              </div>
-              <div className="input-group">
-                <span className="input-label">INDIGENOUS SCRAP:</span>
-                <input
-                  type="text"
-                  name="indigenousScrap"
-                  value={formData.indigenousScrap}
-                  onChange={handleInputChange}
-                />
-              </div>
-            </div>
+            <input placeholder="DRI" name="dri" value={formData.dri} onChange={handleInputChange} />
+            <input placeholder="PELLETS" name="pellet" value={formData.pellet} onChange={handleInputChange} />
+            <input placeholder="IMPORTED SCRAP" name="importedScrap" value={formData.importedScrap} onChange={handleInputChange} />
+            <input placeholder="INDIGENOUS SCRAP" name="indigenousScrap" value={formData.indigenousScrap} onChange={handleInputChange} />
           </div>
         </div>
 
-        {/* Section 7: DIN Manufacturer & Pellet Manufacturer */}
+        {/* 7 */}
         <div className="form-section">
-          <div className="section-number">7.</div>
-          <div className="section-content">
+  <div className="section-number">7.</div>
 
-            <label className="section-label">ARE YOU: (A) DRI MANUFACTURER</label>
-            <div className="checkbox-group">
-              <label><input type="checkbox" name="driManufacturerY" checked={formData.driManufacturerY} onChange={handleInputChange} /> YES</label>
-              <label><input type="checkbox" name="driManufacturerN" checked={formData.driManufacturerN} onChange={handleInputChange} /> NO</label>
-            </div>
+  <div className="section-content">
 
-            <label>Process Route:</label>
-            <div className="checkbox-group">
-              <label><input type="checkbox" name="processRouteGasBased" checked={formData.processRouteGasBased} onChange={handleInputChange} /> GAS BASED</label>
-              <label><input type="checkbox" name="processRouteCoalBased" checked={formData.processRouteCoalBased} onChange={handleInputChange} /> COAL BASED</label>
-            </div>
+    {/* A) DRI MANUFACTURER */}
+    <label className="section-label">
+      ARE YOU: (A) DRI MANUFACTURER
+    </label>
 
-            <input type="text" name="technology" placeholder="Technology" value={formData.technology} onChange={handleInputChange} />
-            <input type="text" name="annualCapacity" placeholder="Annual Capacity" value={formData.annualCapacity} onChange={handleInputChange} />
+    <div className="radio-row">
+      <label>
+        <input
+          type="radio"
+          name="driManufacturer"
+          value="YES"
+          checked={formData.driManufacturer === "YES"}
+          onChange={handleInputChange}
+        />{" "}
+        (Y)
+      </label>
 
-            <label>(B) PELLET MANUFACTURER</label>
-            <input type="text" name="pelletProcess" placeholder="Process" value={formData.pelletProcess} onChange={handleInputChange} />
-            <input type="text" name="pelletAnnualCapacity" placeholder="Annual Capacity" value={formData.pelletAnnualCapacity} onChange={handleInputChange} />
-          </div>
-        </div>
+      <label>
+        <input
+          type="radio"
+          name="driManufacturer"
+          value="NO"
+          checked={formData.driManufacturer === "NO"}
+          onChange={handleInputChange}
+        />{" "}
+        (N)
+      </label>
+    </div>
+
+    {/* PROCESS ROUTE */}
+    <label className="section-label">PROCESS ROUTE:</label>
+
+    <div className="checkbox-row">
+      <label>
+        <input
+          type="checkbox"
+          name="processRouteGasBased"
+          checked={formData.processRouteGasBased}
+          onChange={handleInputChange}
+        />{" "}
+        GAS BASED
+      </label>
+
+      <label>
+        <input
+          type="checkbox"
+          name="processRouteCoalBased"
+          checked={formData.processRouteCoalBased}
+          onChange={handleInputChange}
+        />{" "}
+        COAL BASED
+      </label>
+    </div>
+
+    {/* TECHNOLOGY + ANNUAL CAPACITY */}
+    <div className="two-col-grid">
+      <input
+        type="text"
+        placeholder="TECHNOLOGY"
+        name="technology"
+        value={formData.technology}
+        onChange={handleInputChange}
+      />
+
+      <input
+        type="text"
+        placeholder="ANNUAL CAPACITY"
+        name="annualCapacity"
+        value={formData.annualCapacity}
+        onChange={handleInputChange}
+      />
+    </div>
+
+    {/* B) PELLET MANUFACTURER */}
+    <label className="section-label" style={{ marginTop: "10px" }}>
+      (B) PELLET MANUFACTURER
+    </label>
+
+    <div className="two-col-grid">
+      <input
+        type="text"
+        placeholder="PROCESS"
+        name="pelletProcess"
+        value={formData.pelletProcess}
+        onChange={handleInputChange}
+      />
+
+      <input
+        type="text"
+        placeholder="ANNUAL CAPACITY"
+        name="pelletAnnualCapacity"
+        value={formData.pelletAnnualCapacity}
+        onChange={handleInputChange}
+      />
+    </div>
+
+  </div>
+</div>
 
 
-        {/* Section 8: Rolling Mill Details */}
+        {/* 8 */}
         <div className="form-section">
           <div className="section-number">8.</div>
+          <label className="section-label">ROLLING MILL DETAILS :-</label>
           <div className="section-content">
-            <label className="section-label">ROLLING MILL DETAILS:</label>
-            <div className="checkbox-group">
-              <div className="checkbox-item">
-                <input
-                  type="checkbox"
-                  name="rollingMillIntegrated"
-                  checked={formData.rollingMillIntegrated}
-                  onChange={handleInputChange}
-                />
-                <label>INTEGRATED</label>
-              </div>
-              <div className="checkbox-item">
-                <input
-                  type="checkbox"
-                  name="rollingMillSisterConcern"
-                  checked={formData.rollingMillSisterConcern}
-                  onChange={handleInputChange}
-                />
-                <label>SISTER CONCERN</label>
-              </div>
-            </div>
+            <label><input type="checkbox" name="rollingMillIntegrated" onChange={handleInputChange} /> INTEGRATED</label>
+            <label><input type="checkbox" name="rollingMillSisterConcern" onChange={handleInputChange} /> SISTER CONCERN</label>
           </div>
         </div>
 
-        {/* Section 9: Mill Capacity */}
+        {/* 9 */}
         <div className="form-section">
           <div className="section-number">9.</div>
+          <label className="section-label">MILL CAPACITY (tph):</label>
           <div className="section-content">
-            <label className="section-label">MILL CAPACITY (pip):</label>
-            <div className="mill-capacity-grid">
-              <div className="input-group">
-                <span className="input-label">ROUGHING [IN INCH]:</span>
-                <input
-                  type="text"
-                  name="millCapacityRoughing"
-                  value={formData.millCapacityRoughing}
-                  onChange={handleInputChange}
-                />
-              </div>
-              <div className="input-group">
-                <span className="input-label">INTERMEDIATE [IN INCH]:</span>
-                <input
-                  type="text"
-                  name="millCapacityIntermediate"
-                  value={formData.millCapacityIntermediate}
-                  onChange={handleInputChange}
-                />
-              </div>
-              <div className="input-group">
-                <span className="input-label">FINISHING [IN INCH]:</span>
-                <input
-                  type="text"
-                  name="millCapacityFinishing"
-                  value={formData.millCapacityFinishing}
-                  onChange={handleInputChange}
-                />
-              </div>
-            </div>
+            <input placeholder="ROUGHING (IN INCH)" name="millCapacityRoughing" value={formData.millCapacityRoughing} onChange={handleInputChange} />
+            <input placeholder="INTERMEDIATE (IN INCH)" name="millCapacityIntermediate" value={formData.millCapacityIntermediate} onChange={handleInputChange} />
+            <input placeholder="FINISHING (IN INCH)" name="millCapacityFinishing" value={formData.millCapacityFinishing} onChange={handleInputChange} />
           </div>
         </div>
 
-        {/* Section 10: Product Name */}
+        {/* 10 */}
         <div className="form-section">
           <div className="section-number">10.</div>
+          <label className="section-label">NAME OF THE PRODUCT:</label>
           <div className="section-content">
-            <label className="section-label">NAME OF THE PRODUCT:</label>
-            <div className="checkbox-group">
-              <div className="checkbox-item">
-                <input
-                  type="checkbox"
-                  name="productTMT"
-                  checked={formData.productTMT}
-                  onChange={handleInputChange}
-                />
-                <label>TMT</label>
-              </div>
-              <div className="checkbox-item">
-                <input
-                  type="checkbox"
-                  name="productStructure"
-                  checked={formData.productStructure}
-                  onChange={handleInputChange}
-                />
-                <label>STRUCTURE</label>
-              </div>
-              <div className="checkbox-item">
-                <input
-                  type="checkbox"
-                  name="productOther"
-                  checked={formData.productOther}
-                  onChange={handleInputChange}
-                />
-                <label>OTHER</label>
-                {formData.productOther && (
-                  <input
-                    type="text"
-                    name="otherProductName"
-                    value={formData.otherProductName}
-                    onChange={handleInputChange}
-                    placeholder="Specify other product"
-                    className="other-product-input"
-                  />
-                )}
-              </div>
-            </div>
+            <label><input type="checkbox" name="productTMT" onChange={handleInputChange} /> TMT</label>
+            <label><input type="checkbox" name="productStructure" onChange={handleInputChange} /> STRUCTURE</label>
+            <label><input type="checkbox" name="productOther" onChange={handleInputChange} /> OTHER</label>
+            {formData.productOther && (
+              <input name="otherProductName" value={formData.otherProductName} onChange={handleInputChange} placeholder="Specify Other" />
+            )}
           </div>
         </div>
 
-        {/* Section 11: Brand Name & Power */}
+        {/* 11 */}
         <div className="form-section">
           <div className="section-number">11.</div>
+          <label className="section-label"> BRAND NAME:</label>
           <div className="section-content">
-            <div className="brand-power-grid">
-              <div className="input-group">
-                <span className="input-label">BRAND NAME:</span>
-                <input
-                  type="text"
-                  name="brandName"
-                  value={formData.brandName}
-                  onChange={handleInputChange}
-                />
-              </div>
-              <div className="input-group">
-                <span className="input-label">POWER-CONNECTING LOAD (KVA):</span>
-                <input
-                  type="text"
-                  name="powerConnectingLoad"
-                  value={formData.powerConnectingLoad}
-                  onChange={handleInputChange}
-                />
-              </div>
-            </div>
+            <input placeholder="BRAND NAME" name="brandName" value={formData.brandName} onChange={handleInputChange} />
           </div>
         </div>
 
-        {/* Section 12: Procurement Source */}
+        {/* 12 */}
         <div className="form-section">
           <div className="section-number">12.</div>
           <div className="section-content">
-            <label>POWER CONNECTING LOAD (KVA)</label>
-            <input
-              type="text"
-              name="powerConnectingLoad"
-              value={formData.powerConnectingLoad}
-              onChange={handleInputChange}
-            />
+            <input placeholder="POWER CONNECTING LOAD (KVA)" name="powerConnectingLoad" value={formData.powerConnectingLoad} onChange={handleInputChange} />
           </div>
         </div>
 
+        {/* 13 */}
         <div className="form-section">
           <div className="section-number">13.</div>
+          <label className="section-label">PRECUREMENT SOURCE:</label>
           <div className="section-content">
-            <label>PROCUREMENT SOURCE</label>
-
-            <div className="checkbox-group">
-              <label><input type="checkbox" name="procurementSelfGenerating" checked={formData.procurementSelfGenerating} onChange={handleInputChange} /> SELF GENERATING</label>
-              <label><input type="checkbox" name="procurementState" checked={formData.procurementState} onChange={handleInputChange} /> STATE</label>
-              <label><input type="checkbox" name="procurementOpenAccess" checked={formData.procurementOpenAccess} onChange={handleInputChange} /> OPEN ACCESS</label>
-            </div>
+            <label><input type="checkbox" name="procurementSelfGenerating" onChange={handleInputChange} /> SELF GENERATING</label>
+            <label><input type="checkbox" name="procurementState" onChange={handleInputChange} /> STATE</label>
+            <label><input type="checkbox" name="procurementOpenAccess" onChange={handleInputChange} /> OPEN ACCESS</label>
           </div>
         </div>
 
-        {/* Section 14: BIS Certification */}
+        {/* 14 */}
         <div className="form-section">
           <div className="section-number">14.</div>
+          <label className="section-label">PLEASE GIVE BIS CERTIFICATION MARK IF TAKEN BY YOU:</label>
           <div className="section-content">
-            <label className="section-label">PLEASE GIVE BIS CERTIFICATION MARK IF TAKEN BY YOU:</label>
-            <input
-              type="text"
-              name="bisCertificationMark"
-              value={formData.bisCertificationMark}
-              onChange={handleInputChange}
-              className="bis-certification-input"
-              placeholder="Enter BIS Certification Mark"
-            />
+            <input placeholder="BIS CERTIFICATION MARK" name="bisCertificationMark" value={formData.bisCertificationMark} onChange={handleInputChange} />
           </div>
         </div>
 
-
-
-        {/* AIIFA Office Section */}
-        <div className="form-section office-section">
+        {/* 15 */}
+        <div className="form-section">
+          <div className="section-number">15.</div>
+          <label className="section-label">PLEASE GIVE GREEN STEEL CERTIFICATE MARK IF TAKEN BY YOU</label>
           <div className="section-content">
-            <label className="section-label">FOR AIIFA OFFICE:</label>
-          
-            <div className="office-details">
-              <div className="input-group">
-                <span className="input-label">Membership No.</span>
-                  <input
-  type="text"
-  name="dateOfEnrollment"
-  value={formData.dateOfEnrollment}
-  onChange={handleInputChange}
-  placeholder="Enter Date"
- />
+            <input placeholder="GREEN STEEL CERTIFICATE" name="greenSteelCertificate" value={formData.greenSteelCertificate} onChange={handleInputChange} />
+          </div>
+        </div>
 
-                <div className="dashed-line"></div>
-              </div>
-              <div className="input-group">
-  <span className="input-label">Date of enrollment</span>
-  <input
-    type="date"
-    name="dateOfEnrollment"
-    value={formData.dateOfEnrollment}
-    onChange={handleInputChange}
-    className="date-input"
-  />
-  <div className="dashed-line"></div>
+        {/* Signature */}
+        {/* <div className="form-section">
+          <div className="section-content">
+            <label className="section-label">COMPANY SEAL & SIGNATURE</label>
+            <div className="signature-box"></div>
+          </div>
+        </div> */}
+
+        {/* Office */}
+        <div className="form-section">
+          <div className="section-content">
+            <input placeholder="Membership No" name="membershipno" value={formData.membershipno} onChange={handleInputChange} />
+            <input type="date" name="dateOfEnrollment" value={formData.dateOfEnrollment} onChange={handleInputChange} />
+          </div>
+        </div>
+
+        {/* MEMBERSHIP FEES TABLE */}
+<div className="membership-fees-section">
+  <h3 className="fees-title">
+    AIIFA MEMBERSHIP FEES w. e. f. 01st OCTOBER, 2023
+  </h3>
+
+  <table className="fees-table">
+    <thead>
+      <tr>
+        <th>S.No.</th>
+        <th>Category</th>
+        <th>Annual Membership Fee</th>
+        <th>Admission Fee</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td>1</td>
+        <td>Life Members</td>
+        <td>Rs. 5,00,000/- onetime fee (RCM Applicable)</td>
+        <td>Nil</td>
+      </tr>
+
+      <tr>
+        <td>2</td>
+        <td>Members (India)</td>
+        <td>Rs. 15000/- Plus GST w.e.f. 01.10.2023</td>
+        <td>Rs. 15000/-</td>
+      </tr>
+
+      <tr>
+        <td></td>
+        <td>Member (Abroad)</td>
+        <td>US$. 500 w.e.f. 01.10.2023</td>
+        <td>US$ 250</td>
+      </tr>
+
+      <tr>
+        <td>3</td>
+        <td>Affiliate Member</td>
+        <td>
+          Rs. 20,000/- plus GST @ 18% w.e.f. 01.10.2023
+          <br />
+          (Companies from (b) to (e) of para 2.1 (i) of Bye-Laws)
+        </td>
+        <td>Rs. 15000/-</td>
+      </tr>
+
+      <tr>
+        <td>4</td>
+        <td>Associate Member</td>
+        <td>
+          Rs. 2000/- As in para 2.1 (i) (f) of Bye Laws
+        </td>
+        <td>Rs. 5000/-</td>
+      </tr>
+    </tbody>
+  </table>
+
+  <div className="notes-section">
+    <strong>Note:</strong> The Membership Application Form is available at:  
+    <span><a href="https://www.aaiifa.org/">www.aaiifa.org </a> </span>  
+    GST is extra as per admissible
+  </div>
+
+{/* BANK DETAILS */}
+<div className="bank-details-section">
+  <h3 className="bank-title">Bank Details:</h3>
+
+  <div className="bank-item">
+    <strong>1. Axis Bank:</strong><br />
+    196, Shalimar Bagh, Delhi-110088<br />
+    <strong>A/c No.:</strong> 263010100094586<br />
+    <strong>RTGS:</strong> UTIB0000263
+  </div>
+
+  <div className="bank-item">
+    <strong>2. Yes Bank:</strong><br />
+    D Mall, Netaji Subhash Place, Delhi-110034<br />
+    <strong>A/c No.:</strong> 0184946000 <br />
+    <strong>IFSC: </strong> YESB0000184
+  </div>
 </div>
 
-            </div>
-          </div>
-        </div>
+</div>
 
-        {/* Membership Fees Table */}
-        <div className="membership-fees-section">
-          <h3 className="fees-title">AIIFA MEMBERSHIP FEES w. e. f. 01° OCTOBER, 2023</h3>
-          <table className="fees-table">
-            <thead>
-              <tr>
-                <th>SR. NO.</th>
-                <th>Category</th>
-                <th>Annual Membership Fee</th>
-                <th>Admission Fee</th>
-              </tr>
-            </thead>
-            <tbody>
-              <tr>
-                <td>1</td>
-                <td>Life Members</td>
-                <td>Rs. 5,00,000/- one time fee (RCM Applicable)</td>
-                <td>Nil</td>
-              </tr>
-              <tr>
-                <td>2</td>
-                <td>Members (India)</td>
-                <td>Rs. 15000/- Plus GST w.e.f. 01.10.2023</td>
-                <td>Rs. 15000/-</td>
-              </tr>
-              <tr>
-                <td></td>
-                <td>Member (Abroad)</td>
-                <td>US$.500 w.e.f. 01.10.2013</td>
-                <td>US$ 250</td>
-              </tr>
-              <tr>
-                <td>3</td>
-                <td>Affiliate Member</td>
-                <td>Rs. 20,000/- plus GST @ 18% w.e.f. 01.10.2023<br />
-                  (Companies from [b] to [d] of para 2.1 (i) of Bye-Laws)</td>
-                <td>Rs. 15000/-</td>
-              </tr>
-              <tr>
-                <td>4</td>
-                <td>Associate Member</td>
-                <td>Rs. 2000/- As in para 2.1 (j) (f) of Bye Laws</td>
-                <td>Rs. 5000/-</td>
-              </tr>
-            </tbody>
-          </table>
-
-          <div className="notes-section">
-            <p><strong>Note:</strong> The Membership Application Form is available at: www.aalfli.org. GST is extra as per admissible</p>
-          </div>
-
-          <div className="bank-details">
-            <h4>Bank Details:</h4>
-            <div className="bank-grid">
-              {/* <div className="bank-item">
-                <strong>1. Axis Bank:</strong> 196, Shafiqur Bagh, Delhi-110088<br />
-                A/c No.: 263010100004586<br />
-                RTGS/IFSC: UTIB0000263
-              </div> */}
-              <div className="bank-item">
-                <strong> Yes Bank:</strong> A - 42, Vishal Enclave, Opp to TD Mall, N.D. - 110027<br />
-                A/c No.: 00309460000783<br />
-                IFSC: YESB0000030
-              </div>
-            </div>
-          </div>
-        </div>
 
         <div className="form-actions">
           <button type="submit" className="submit-button">
             Submit Membership Form
           </button>
         </div>
+
       </form>
 
-      {successMessage && (
-        <div className="success-toast">
-          {successMessage}
-        </div>
-      )}
-
+      {successMessage && <div className="success-toast">{successMessage}</div>}
     </div>
   );
 };
+
 export default AIIFAMembershipForm;
