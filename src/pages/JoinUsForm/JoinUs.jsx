@@ -94,7 +94,7 @@ const AIIFAMembershipForm = () => {
   };
 
   return (
-    <div className="aiifa-form-container">
+    <div className="aiifa-form-container my-4">
 
       {/* HEADER */}
       <div className="aiifa-header">
@@ -486,7 +486,7 @@ const AIIFAMembershipForm = () => {
   <div className="bank-item">
     <strong>2. Yes Bank:</strong><br />
     D Mall, Netaji Subhash Place, Delhi-110034<br />
-    <strong>A/c No.:</strong> 0184946000 <br />
+    <strong>A/c No.:</strong> 018494600000338 <br />
     <strong>IFSC: </strong> YESB0000184
   </div>
 </div>

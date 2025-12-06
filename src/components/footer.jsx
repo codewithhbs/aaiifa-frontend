@@ -134,22 +134,38 @@ export default function Footer() {
               </div>
             </div>
 
-            {/* COLUMN 3 - CONTACT INFO */}
-            <div className="col-xl-3 col-lg-3 col-md-6 col-12">
-              <div className="footer-widgets">
-                <h3 className="footer-widget-heading">Location</h3>
-                <iframe
-                  src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d14008.229277752147!2d77.15178!3d28.690654!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x390d0234641aaaab%3A0xdb7dd47463729a2a!2sAIIFA%20Sustainable%20Steel%20Manufacturers%20Association!5e0!3m2!1sen!2sin"
-                  width="100%"
-                  height="200"
-                  style={{ border: "0", borderRadius: "8px" }}
-                  allowFullScreen
-                  loading="lazy"
-                  referrerPolicy="no-referrer-when-downgrade"
-                  title="AIIFA Office Location"
-                ></iframe>
-              </div>
-            </div>
+            <div className="footer-widgets">
+  <h3 className="footer-widget-heading">Location</h3>
+
+  {/* NEWSLETTER SECTION */}
+  <div className="footer-newsletter mb-3">
+    <h5 className="newsletter-title">Subscribe to Our Newsletter</h5>
+    <form className="newsletter-form">
+      <input
+        type="email"
+        placeholder="Enter your email"
+        className="newsletter-input"
+        required
+      />
+      <button type="submit" className="newsletter-btn">
+        Subscribe
+      </button>
+    </form>
+  </div>
+
+  {/* MAP */}
+  <iframe
+    src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d14008.229277752147!2d77.15178!3d28.690654!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x390d0234641aaaab%3A0xdb7dd47463729a2a!2sAIIFA%20Sustainable%20Steel%20Manufacturers%20Association!5e0!3m2!1sen!2sin"
+    width="100%"
+    height="200"
+    style={{ border: "0", borderRadius: "8px" }}
+    allowFullScreen
+    loading="lazy"
+    referrerPolicy="no-referrer-when-downgrade"
+    title="AIIFA Office Location"
+  ></iframe>
+</div>
+
           </div>
         </div>
       </div>
