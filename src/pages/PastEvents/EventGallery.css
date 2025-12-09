@@ -51,3 +51,24 @@
     font-size: 1.6rem;
   }
 }
+/* past videos  */
+.past-event-card.clickable {
+  cursor: pointer;
+  transition: transform 0.3s ease;
+}
+
+.past-event-card.clickable:hover {
+  transform: translateY(-6px);
+}
+
+.view-more-badge {
+font-size: 15px;
+    background: #ffffff;
+    color: #970000;
+    padding: 2px 8px;
+    border-radius: 10px;
+    margin-left: 8px;
+    font-weight: 600;
+}
+
+/* past videos  */

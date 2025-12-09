@@ -10239,7 +10239,7 @@ ease;
 
 .our-team-search-icon {
   position: absolute;
-  top: 50%;
+  top: 43%;
   left: 14px;
   transform: translateY(-50%);
   color: #999;
@@ -10361,5 +10361,10 @@ ease;
 .newsletter-btn:hover {
   background: #222;
 }
-
+.newsletter-sidebar h4{
+    font-size: 25px;
+    line-height: 32px;
+    font-weight: 700;
+    color: #ff5000;
+    }   
 /* newsletter  */

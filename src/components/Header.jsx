@@ -48,22 +48,25 @@ export default function Header() {
         { name: "Active Member", href: "/active-member" },
       ],
     },
-    {
-      name: "Newsletter",
-      dropdown: true,
-      items: [
-        { name: "2025 Newsletter", href: "/newsletter-2025" },
-        { name: "2024 Newsletter", href: "/newsletter-2024" },
-        { name: "2023 Newsletter", href: "/newsletter-2023" },
-        { name: "2022 Newsletter", href: "/newsletter-2022" },
-        { name: "2021 Newsletter", href: "/newsletter-2021" },
-        { name: "2020 Newsletter", href: "/newsletter-2020" },
-        { name: "2019 Newsletter", href: "/newsletter-2019" },
-        { name: "2018 Newsletter", href: "/newsletter-2018" },
-        { name: "2017 Newsletter", href: "/newsletter-2017" },
-        { name: "2016 Newsletter", href: "/newsletter-2016" },
-      ],
-    },
+    // {
+    //   name: "Newsletter",
+    //   dropdown: true,
+    //   items: [
+    //     { name: "2025 Newsletter", href: "/newsletter-2025" },
+    //     { name: "2024 Newsletter", href: "/newsletter-2024" },
+    //     { name: "2023 Newsletter", href: "/newsletter-2023" },
+    //     { name: "2022 Newsletter", href: "/newsletter-2022" },
+    //     { name: "2021 Newsletter", href: "/newsletter-2021" },
+    //     { name: "2020 Newsletter", href: "/newsletter-2020" },
+    //     { name: "2019 Newsletter", href: "/newsletter-2019" },
+    //     { name: "2018 Newsletter", href: "/newsletter-2018" },
+    //     { name: "2017 Newsletter", href: "/newsletter-2017" },
+    //     { name: "2016 Newsletter", href: "/newsletter-2016" },
+    //   ],
+    // },
+   { name: "Newsletter", href: "/newsletter", isFlashy: true },
+
+
     {
       name: "Event",
       dropdown: true,
@@ -71,6 +74,7 @@ export default function Header() {
         { name: "Past Event", href: "/past-events" },
         { name: "Event Video", href: "/past-videos" },
         { name: "Our Upcoming Events", href: "#" },
+        { name: "Past SteelEx Teaser", href: "#" },
       ],
     },
     { name: "Steel Handbook", href: "/steel-handbook" },
@@ -169,11 +173,14 @@ export default function Header() {
                     ) : (
                       <li key={link.name}>
                         <a
-                          href={link.href}
-                          className={currentPath === link.href ? "active" : ""}
-                        >
-                          {link.name}
-                        </a>
+  href={link.href}
+  className={`${currentPath === link.href ? "active" : ""} ${
+    link.isFlashy ? "flashy-newsletter" : ""
+  }`}
+>
+  {link.name}
+</a>
+
                       </li>
                     )
                   )}
@@ -228,12 +235,15 @@ export default function Header() {
                     >
                       {link.items.map((item) => (
                         <li key={item.name}>
-                          <a
-                            href={item.href}
-                            className={currentPath === item.href ? "active" : ""}
-                          >
-                            {item.name}
-                          </a>
+                         <a
+  href={link.href}
+  className={`${currentPath === link.href ? "active" : ""} ${
+    link.isFlashy ? "flashy-newsletter" : ""
+  }`}
+>
+  {link.name}
+</a>
+
                         </li>
                       ))}
                     </ul>

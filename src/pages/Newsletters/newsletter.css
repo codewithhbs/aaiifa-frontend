@@ -77,3 +77,39 @@
   font-size: 1.15rem;
   font-weight: 600;
 }
+
+/* NEWSLETTER PG  */
+.newsletter-sidebar {
+  background: #f9f9f9;
+  border-radius: 10px;
+}
+
+.newsletter-year-list {
+  list-style: none;
+  padding: 0;
+}
+
+.newsletter-year-list li {
+  margin-bottom: 10px;
+}
+
+.newsletter-year-list li a {
+  text-decoration: none;
+  color: #092149;
+  font-weight: 500;
+}
+
+.newsletter-year-list li a:hover {
+  text-decoration: underline;
+}
+
+.subscribe-box {
+  border-top: 1px solid #ddd;
+  padding-top: 20px;
+}
+.btn-newsletter {
+    color: #fff;
+    background-color: #b40303;
+    border-color: #b40303;
+}
+/* NEWSLETTER PG  */

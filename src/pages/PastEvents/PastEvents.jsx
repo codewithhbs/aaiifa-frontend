@@ -10,7 +10,7 @@ const PastEvents = () => {
     },
     {
       year: "2023",
-      title: "2023 Event AIIFA",
+      title: "AIIFA Steelex 2023",
       img: "http://hoverbusinessservices.com/cloud/aiifa/media/events/event.jpg",
     },
     {

@@ -109,6 +109,9 @@ export default function Footer() {
                   <li>
                     <a href="https://hoverbusinessservices.com/cloud/aiifa/Post-Event-Report-2025.pdf">Post Event Report 2025</a>
                   </li>
+                  <li>
+                    <a href="#">Green Steel Certificate Awardee</a>
+                  </li>
                 </ul>
               </div>
             </div>
@@ -138,7 +141,7 @@ export default function Footer() {
   <h3 className="footer-widget-heading">Location</h3>
 
   {/* NEWSLETTER SECTION */}
-  <div className="footer-newsletter mb-3">
+  {/* <div className="footer-newsletter mb-3">
     <h5 className="newsletter-title">Subscribe to Our Newsletter</h5>
     <form className="newsletter-form">
       <input
@@ -151,7 +154,7 @@ export default function Footer() {
         Subscribe
       </button>
     </form>
-  </div>
+  </div> */}
 
   {/* MAP */}
   <iframe

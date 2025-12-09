@@ -33,6 +33,8 @@ import EventGallery2017 from './pages/PastEvents/PastEvent2017.jsx';
 import Breadcrumb from './components/Breadcrumb.jsx';
 import ThankYouPopup from './components/ThankYouPopup.jsx';
 import AIIFAMembershipForm  from './pages/JoinUsForm/JoinUs';
+import Newsletter from './pages/Newsletters/Newsletter.jsx';
+import PastVideos2025 from './pages/PastEvents/PastVideos2025.jsx';
 
 
 // ✅ Inner component to access `useLocation` properly
@@ -75,6 +77,8 @@ function AppContent() {
         <Route path="past-event-2018" element={<EventGallery2018 />} />
         <Route path="past-event-2017" element={<EventGallery2017 />} />
         <Route path="join-us" element={<AIIFAMembershipForm />} />
+        <Route path="/newsletter" element={<Newsletter />} />
+        <Route path="/past-videos-2025" element={<PastVideos2025  />} />
       </Routes>
       <Footer />
     </>
