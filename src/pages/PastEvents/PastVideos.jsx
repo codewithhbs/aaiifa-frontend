@@ -8,23 +8,41 @@ const PastVideos = () => {
     {
       year: "2025",
       title: "AIIFA Steelex 2025",
-      videoUrl: "https://www.youtube.com/embed/IKOzUDAL17E?si=CvXH6UPqpJLD_tPc",
-      hasMultiple: true, // ✅ special flag
+      videoUrl: "https://www.youtube.com/embed/IKOzUDAL17E",
+      hasMultiple: true,
+      route: "/past-videos-2025",
     },
     {
       year: "2024",
       title: "AIIFA SteelEx 2024",
-      videoUrl: "https://www.youtube.com/embed/MSQgsZfdv1k?si=AkQEYeBon6UjRIrz",
+      videoUrl: "https://www.youtube.com/embed/bsfNP4QvRMI",
+      hasMultiple: true,
+      route: "/past-videos-2024",
     },
     {
       year: "2023",
-      title: "AIIFA 2023 Event Recap",
-      videoUrl: "https://www.youtube.com/embed/7fjhxlHZNp8?si=-GVWAsis-DK9xmDb",
+      title: "AIIFA SteelEx 2023",
+      videoUrl: "https://www.youtube.com/embed/7-jEE9BlkO8",
+      hasMultiple: true,
+      route: "/past-videos-2023",
     },
     {
       year: "2022",
       title: "AIIFA 2022 Conference Moments",
-      videoUrl: "https://www.youtube.com/embed/lYW2bN0V9Ug?si=MSOnj-8ltWRXminU",
+      videoUrl: "https://www.youtube.com/embed/MSQgsZfdv1k",
+      hasMultiple: false,
+    },
+    {
+      year: "2019",
+      title: "AIIFA Conference 2019",
+      videoUrl: "https://www.youtube.com/embed/7fjhxlHZNp8",
+      hasMultiple: false,
+    },
+    {
+      year: "2018",
+      title: "AIIFA Conference 2018",
+      videoUrl: "https://www.youtube.com/embed/lYW2bN0V9Ug",
+      hasMultiple: false,
     },
   ];
 
@@ -39,13 +57,13 @@ const PastVideos = () => {
         <div className="past-events-grid">
           {events.map((event, index) => (
             <div
+              key={index}
               className={`past-event-card ${
                 event.hasMultiple ? "clickable" : ""
               }`}
-              key={index}
               onClick={() =>
-                event.hasMultiple
-                  ? navigate("/past-videos-2025")
+                event.hasMultiple && event.route
+                  ? navigate(event.route)
                   : null
               }
             >
