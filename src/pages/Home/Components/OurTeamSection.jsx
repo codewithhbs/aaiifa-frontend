@@ -90,6 +90,7 @@ const teamMembers = [
     img: "media/team/ashok-garg.png",
     bio: "Shri Ashok Garg’s distinguished tenure as Treasurer of the AIIFA Sustainable Steel Manufacturers Association since 1999 is widely regarded as a benchmark of unwavering commitment and exemplary financial leadership."
   }
+  
 ];
 
 
