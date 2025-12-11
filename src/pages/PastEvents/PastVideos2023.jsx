@@ -3,7 +3,7 @@ import React from "react";
 const PastVideos2023 = () => {
   const videos = [
     {
-      title: "AIIFA Steelex 2024 Day-1",
+      title: "AIIFA Steelex 2023 Day-1",
       videoUrl: "https://www.youtube.com/embed/7-jEE9BlkO8?si=_fGVO-Y3A7yvsv7S",
     },
     {

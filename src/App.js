@@ -37,6 +37,7 @@ import Newsletter from './pages/Newsletters/Newsletter.jsx';
 import PastVideos2025 from './pages/PastEvents/PastVideos2025.jsx';
 import PastVideos2024 from './pages/PastEvents/PastVideos2024.jsx';
 import PastVideos2023 from './pages/PastEvents/PastVideos2023.jsx';
+import PastSteelExTeaser from './pages/PastEvents/PastSteelExTeaser.jsx';
 
 
 // ✅ Inner component to access `useLocation` properly
@@ -83,6 +84,7 @@ function AppContent() {
         <Route path="/past-videos-2025" element={<PastVideos2025  />} />
         <Route path="/past-videos-2024" element={<PastVideos2024  />} />
         <Route path="/past-videos-2023" element={<PastVideos2023  />} />
+        <Route path="/steelex-teasers" element={<PastSteelExTeaser  />} />
       </Routes>
       <Footer />
     </>

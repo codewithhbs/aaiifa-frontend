@@ -74,7 +74,7 @@ export default function Header() {
         { name: "Past Event", href: "/past-events" },
         { name: "Event Video", href: "/past-videos" },
         { name: "Our Upcoming Events", href: "#" },
-        { name: "Past SteelEx Teaser", href: "#" },
+        { name: "Past SteelEx Teaser", href: "/steelex-teasers" },
       ],
     },
     { name: "Steel Handbook", href: "/steel-handbook" },
