@@ -52,10 +52,8 @@ export default function AboutUsSection() {
             </h2>
 
             <p className="about-us-description">
-              <strong>AIIFA Sustainable Steel Manufacturers Association</strong>{" "}
-              is a premier industry body driving sustainable growth across
-              India’s steel manufacturing sector. Representing over 1,800
-              members—including induction furnace units, rolling mills, casting
+              The <strong>AIIFA Sustainable Steel Manufacturers Association</strong>{" "}
+               , formerly known as the All India Induction Furnaces Association and established in 1987, is a premier national industry body dedicated to driving sustainable growth in India’s steel manufacturing sector. Representing over 1,800 members—including induction furnace units, rolling mills, casting
               units, fabricators, and manufacturers—AIIFA advocates for
               environmentally responsible and economically viable practices
               aligned with national development goals and global competitiveness.

@@ -18,7 +18,7 @@ export default function AboutUsSection() {
             <div className="about-us-main-image-wrapper">
               <figure className="aiifa-profile-image">
                 <img
-                  src="media/about/about1.jpg"
+                  src="media/about/about-aiffa.jpg"
                   alt="AIIFA Office Building"
                   className="img-fluid"
                   loading="lazy"
@@ -42,7 +42,7 @@ export default function AboutUsSection() {
 
           {/* ===== RIGHT: CONTENT COLUMN ===== */}
           <div className="about-us-content-column">
-            <p className="our-team-subtitle">ABOUT Industry</p>
+            <p className="our-team-subtitle">Secondary Steel Manufacturing Industries</p>
 
             <h2 className="our-team-title">About The Industry</h2>
 

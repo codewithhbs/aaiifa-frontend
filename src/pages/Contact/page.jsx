@@ -129,7 +129,7 @@ const ContactSection = () => {
 
           {/* Contact Form */}
           <div className="contact-form-container">
-            <h2 className="form-title">Send Your Views / Suggestions</h2>
+            <h2 className="form-title" style={{textDecoration: "none"}}>Send Your Views / Suggestions</h2>
             <p className="form-subtitle">
               We'll get back to you as soon as possible
             </p>
@@ -165,7 +165,7 @@ const ContactSection = () => {
                 onChange={handleChange}
                 placeholder="Message *"
                 required
-                rows={5}
+                rows={2}
               ></textarea>
 
               <button type="submit" className="submit-button">
@@ -179,18 +179,38 @@ const ContactSection = () => {
         </div>
       </div>
 
-      {/* 🗺️ Map Section */}
-      <div className="map-container">
-        <iframe
-          title="Google Map"
-          src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d6999.932645477202!2d77.15178!3d28.690654!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x390d0234641aaaab%3A0xdb7dd47463729a2a!2sAIIFA%20Sustainable%20Steel%20Manufacturers%20Association!5e0!3m2!1sen!2sin!4v1762417646926!5m2!1sen!2sin"
-          width="100%"
-          height="400"
-          allowFullScreen=""
-          loading="lazy"
-          referrerPolicy="no-referrer-when-downgrade"
-        ></iframe>
+{/* Map & Image Section */}
+      <div className="location-section">
+        <div className="location-container">
+          <div className="location-grid">
+            <div className="location-col map-col">
+              <div className="map-wrapper">
+                <iframe
+                  title="Google Map"
+                  src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d6999.932645477202!2d77.15178!3d28.690654!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x390d0234641aaaab%3A0xdb7dd47463729a2a!2sAIIFA%20Sustainable%20Steel%20Manufacturers%20Association!5e0!3m2!1sen!2sin!4v1762417646926!5m2!1sen!2sin"
+                  loading="lazy"
+                  referrerPolicy="no-referrer-when-downgrade"
+                ></iframe>
+              </div>
+            </div>
+
+            <div className="location-col image-col">
+              <div className="image-wrapper">
+                <img
+                  src="/media/about/about1.jpg"
+                  alt="AIIFA Office Building"
+                  loading="lazy"
+                />
+                <div className="image-overlay">
+                  <h3>Visit Our Office</h3>
+                  <p>We're here to help you</p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
       </div>
+
     </section>
   );
 };

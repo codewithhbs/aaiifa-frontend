@@ -698,7 +698,7 @@ text-align: start;
 
 .about-us-image-column {
     flex: 1; /* Takes up equal space initially */
-    min-width: 450px; /* Slightly wider min-width */
+    min-width: auto; /* Slightly wider min-width */
     position: relative;
     padding: 40px; /* Increased padding inside the card for the image */
     /* Adjust border-radius to match parent or inner image if needed */
@@ -709,10 +709,9 @@ text-align: start;
 .about-us-main-image-wrapper {
     position: relative; /* For absolute positioning of the counter */
     width: 100%;
-    height: 450px; /* Increased height for the image area */
+    height: auto; /* Increased height for the image area */
     border-radius: 15px; /* Rounded image itself */
     overflow: hidden;
-    box-shadow: 0 5px 20px rgba(0, 0, 0, 0.1); /* Subtle shadow for image */
 }
 
 .about-us-main-image {
